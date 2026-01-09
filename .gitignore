@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+input_files/
+processed_data/
+generated_questions/
+exported_papers/
+.streamlit/
