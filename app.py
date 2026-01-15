@@ -3,12 +3,11 @@ import fitz  # PyMuPDF
 import nltk
 import pandas as pd
 import re
+import json
 
-from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.corpus import stopwords
 
-# Download stopwords (only first run)
-nltk.download('stopwords')
+nltk.download("stopwords")
 
 # -------------------------------------------------
 # PDF TEXT EXTRACTION
@@ -22,92 +21,37 @@ def extract_text_from_pdf(pdf_file):
 
 
 # -------------------------------------------------
-# SYLLABUS TOPIC EXTRACTION (TF-IDF + FALLBACK)
+# MODULE-WISE SYLLABUS TOPIC EXTRACTION (RULE-BASED)
 # -------------------------------------------------
-def extract_topics(text, top_n=15):
+def extract_module_topics(text):
+    modules = {}
+    current_module = None
+
     lines = text.split("\n")
 
-    cleaned_lines = []
     for line in lines:
-        line = line.strip().lower()
+        line = line.strip()
 
-        # remove module/unit labels
-        line = re.sub(r"(module|unit)\s*\w*", "", line)
-        line = re.sub(r"(introduction|overview|course|syllabus)", "", line)
+        module_match = re.match(r"Module\s+([IVX]+)", line, re.IGNORECASE)
+        if module_match:
+            current_module = f"Module {module_match.group(1)}"
+            modules[current_module] = []
+            continue
 
-        if 5 < len(line) < 100 and any(c.isalpha() for c in line):
-            cleaned_lines.append(line)
+        if line.lower().startswith((
+            "course outcome",
+            "references",
+            "textbook",
+            "syllabus",
+            "marks"
+        )):
+            continue
 
-    stop_words = stopwords.words('english')
+        if current_module and len(line) > 5:
+            modules[current_module].append(line)
 
-    # ---------- TRY TF-IDF ----------
-    try:
-        vectorizer = TfidfVectorizer(
-            stop_words=stop_words,
-            ngram_range=(1, 2),
-            max_features=30
-        )
+    return modules
 
-        tfidf_matrix = vectorizer.fit_transform(cleaned_lines)
-        feature_names = vectorizer.get_feature_names_out()
-        scores = tfidf_matrix.toarray().sum(axis=0)
-
-        topic_scores = dict(zip(feature_names, scores))
-        sorted_topics = sorted(topic_scores.items(), key=lambda x: x[1], reverse=True)
-
-        if len(sorted_topics) >= 5:
-            return sorted_topics[:top_n]
-
-    except Exception:
-        pass
-
-    # ---------- FALLBACK: KEYWORD HARVESTING ----------
-    keywords = set()
-    for line in cleaned_lines:
-        for word in line.split():
-            if word not in stop_words and len(word) > 4:
-                keywords.add(word)
-
-    keywords = list(keywords)[:top_n]
-
-    return [(kw, 0.1) for kw in keywords]
-
-
-# -------------------------------------------------
-# STREAMLIT UI
-# -------------------------------------------------
-st.set_page_config(
-    page_title="Question Paper Generation System",
-    layout="centered"
-)
-
-st.title("📄 Question Paper Generation System")
-st.subheader("Syllabus Topic Extraction using TF-IDF")
-
-uploaded_file = st.file_uploader(
-    "Upload Syllabus PDF",
-    type=["pdf"]
-)
-
-if uploaded_file:
-    st.success("Syllabus uploaded successfully")
-
-    syllabus_text = extract_text_from_pdf(uploaded_file)
-
-    st.subheader("Extracted Text (Preview)")
-    st.text(syllabus_text[:1000])
-
-    if st.button("Extract Topics"):
-        topics = extract_topics(syllabus_text)
-
-        df = pd.DataFrame(topics, columns=["Topic", "Score"])
-
-        st.subheader("📌 Extracted Topics")
-        st.table(df)
-
-        df.to_csv("processed_data/syllabus_topics.csv", index=False)
-        st.success("Topics saved to processed_data/syllabus_topics.csv")
-import json
 
 # -------------------------------------------------
 # TEXTBOOK PARSING & CHUNKING
@@ -124,8 +68,74 @@ def chunk_text(text, chunk_size=150):
     return chunks
 
 
+# -------------------------------------------------
+# STREAMLIT UI
+# -------------------------------------------------
+st.set_page_config(
+    page_title="Question Paper Generation System",
+    layout="centered"
+)
+
+st.title("📄 Question Paper Generation System")
+
+# =================================================
+# SYLLABUS SECTION
+# =================================================
+st.header("1️⃣ Syllabus Upload & Topic Extraction")
+
+syllabus_file = st.file_uploader(
+    "Upload Syllabus PDF",
+    type=["pdf"],
+    key="syllabus"
+)
+
+if syllabus_file:
+    st.success("Syllabus uploaded successfully")
+
+    syllabus_text = extract_text_from_pdf(syllabus_file)
+
+    st.subheader("Extracted Syllabus Text (Preview)")
+    st.text(syllabus_text[:1000])
+
+    module_topics = extract_module_topics(syllabus_text)
+
+    if module_topics:
+        # 🔹 BULLET VIEW
+        st.subheader("📘 Module-wise Syllabus Topics (List View)")
+        for module, topics in module_topics.items():
+            st.markdown(f"### 🔹 {module}")
+            for t in topics:
+                st.write(f"- {t}")
+
+        # 🔹 TABLE VIEW (THIS IS WHAT YOU WANTED)
+        table_data = []
+        for module, topics in module_topics.items():
+            for topic in topics:
+                table_data.append({
+                    "Module": module,
+                    "Topic": topic
+                })
+
+        df_topics = pd.DataFrame(table_data)
+
+        st.subheader("📊 Extracted Syllabus Topics (Table View)")
+        st.table(df_topics)
+
+        # Save outputs
+        df_topics.to_csv("processed_data/syllabus_topics_table.csv", index=False)
+        with open("processed_data/module_wise_topics.json", "w", encoding="utf-8") as f:
+            json.dump(module_topics, f, indent=2)
+
+        st.success("Syllabus topics saved successfully")
+
+    else:
+        st.warning("No modules detected in syllabus")
+
+# =================================================
+# TEXTBOOK SECTION
+# =================================================
 st.markdown("---")
-st.subheader("📘 Textbook Ingestion & Chunking")
+st.header("2️⃣ Textbook Parsing & Chunking")
 
 textbook_file = st.file_uploader(
     "Upload Textbook PDF",
@@ -138,7 +148,7 @@ if textbook_file:
 
     textbook_text = extract_text_from_pdf(textbook_file)
 
-    st.subheader("Extracted Text Preview (Textbook)")
+    st.subheader("Extracted Text (Preview)")
     st.text(textbook_text[:1000])
 
     if st.button("Parse & Chunk Textbook"):
@@ -146,12 +156,10 @@ if textbook_file:
 
         st.success(f"Total chunks created: {len(chunks)}")
 
-        # Display first few chunks
         for i, ch in enumerate(chunks[:3]):
             st.markdown(f"**Chunk {i+1}:**")
             st.write(ch)
 
-        # Save chunks
         with open("processed_data/textbook_chunks.json", "w", encoding="utf-8") as f:
             json.dump(chunks, f, indent=2)
 
