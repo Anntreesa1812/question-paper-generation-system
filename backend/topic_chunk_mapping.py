@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 
-def map_topics_to_chunks(topics, chunks, top_k=3):
+def map_topics_to_chunks(topics, chunks, top_k=10):
     """
     topics: list[str]
     chunks: list[dict] -> {"chunk_id": int, "text": str}

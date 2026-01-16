@@ -1,31 +1,28 @@
+import os
+import json
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-import json
 
 from syllabus import extract_text_from_pdf as extract_syllabus_text, extract_module_topics
 from chunking import extract_text_from_pdf as extract_textbook_text, chunk_text
 from topic_chunk_mapping import map_topics_to_chunks
 
 
-# -------------------------------
-# Helper: Load syllabus topics
-# -------------------------------
-def load_syllabus_topics():
-    with open("processed_data/syllabus_topics.json", "r") as f:
-        data = json.load(f)
+# --------------------------------------------------
+# BASE PATH SETUP (VERY IMPORTANT)
+# --------------------------------------------------
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROCESSED_DATA_DIR = os.path.join(BASE_DIR, "processed_data")
 
-    topics = []
-    for module, topic_list in data.items():
-        topics.extend(topic_list)
-
-    return topics
+# Ensure processed_data folder exists
+os.makedirs(PROCESSED_DATA_DIR, exist_ok=True)
 
 
+# --------------------------------------------------
+# FASTAPI APP
+# --------------------------------------------------
 app = FastAPI()
 
-# -------------------------------
-# CORS (IMPORTANT for React)
-# -------------------------------
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],
@@ -34,54 +31,87 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# -------------------------------
+
+# --------------------------------------------------
 # TEST ROUTE
-# -------------------------------
+# --------------------------------------------------
 @app.get("/")
 def root():
     return {"status": "Backend running"}
 
-# -------------------------------
-# SYLLABUS EXTRACTION ROUTE
-# -------------------------------
+
+# --------------------------------------------------
+# STEP 1: SYLLABUS EXTRACTION
+# --------------------------------------------------
 @app.post("/extract-syllabus")
 def extract_syllabus(file: UploadFile = File(...)):
     text = extract_syllabus_text(file)
     modules = extract_module_topics(text)
-    return modules
 
-# -------------------------------
-# TEXTBOOK CHUNKING ROUTE
-# -------------------------------
+    syllabus_path = os.path.join(PROCESSED_DATA_DIR, "syllabus_topics.json")
+    with open(syllabus_path, "w", encoding="utf-8") as f:
+        json.dump(modules, f, indent=4)
+
+    return {
+        "message": "Syllabus topics extracted and stored",
+        "modules": modules
+    }
+
+
+# --------------------------------------------------
+# STEP 2: TEXTBOOK CHUNKING
+# --------------------------------------------------
 @app.post("/chunk-textbook")
 async def chunk_textbook(file: UploadFile = File(...)):
     text = extract_textbook_text(file)
-    chunks = chunk_text(text)
-
-    return {
-        "total_chunks": len(chunks),
-        "chunks": chunks[:10]
-    }
-
-# -------------------------------
-# SEMANTIC MAPPING ROUTE ✅
-# -------------------------------
-@app.post("/semantic-mapping")
-def semantic_mapping(file: UploadFile = File(...)):
-    # 1️⃣ Extract textbook text
-    text = extract_textbook_text(file)
-
-    # 2️⃣ Chunk textbook
     raw_chunks = chunk_text(text)
+
     chunks = [
-        {"chunk_id": i + 1, "text": c}
-        for i, c in enumerate(raw_chunks)
+        {"chunk_id": i + 1, "text": chunk}
+        for i, chunk in enumerate(raw_chunks)
     ]
 
-    # 3️⃣ Load syllabus topics (dynamic)
-    topics = load_syllabus_topics()
+    chunks_path = os.path.join(PROCESSED_DATA_DIR, "textbook_chunks.json")
+    with open(chunks_path, "w", encoding="utf-8") as f:
+        json.dump(chunks, f, indent=4)
 
-    # 4️⃣ Semantic mapping (SBERT)
+    return {
+        "message": "Textbook chunked and stored",
+        "total_chunks": len(chunks)
+    }
+
+
+# --------------------------------------------------
+# STEP 3: SEMANTIC MAPPING (NO FILE UPLOAD)
+# --------------------------------------------------
+@app.post("/semantic-mapping")
+def semantic_mapping():
+    syllabus_path = os.path.join(PROCESSED_DATA_DIR, "syllabus_topics.json")
+    chunks_path = os.path.join(PROCESSED_DATA_DIR, "textbook_chunks.json")
+
+    if not os.path.exists(syllabus_path):
+        return {"error": "Syllabus not processed yet"}
+
+    if not os.path.exists(chunks_path):
+        return {"error": "Textbook not processed yet"}
+
+    with open(syllabus_path, "r", encoding="utf-8") as f:
+        modules = json.load(f)
+
+    topics = []
+    for module, topic_list in modules.items():
+        topics.extend(topic_list)
+
+    with open(chunks_path, "r", encoding="utf-8") as f:
+        chunks = json.load(f)
+
     mapping = map_topics_to_chunks(topics, chunks)
 
-    return mapping
+    mapping_path = os.path.join(PROCESSED_DATA_DIR, "topic_chunk_mapping.json")
+    with open(mapping_path, "w", encoding="utf-8") as f:
+        json.dump(mapping, f, indent=4)
+
+    return {
+        "message": "Semantic mapping completed successfully",
+        "mapping": mapping
+    }
