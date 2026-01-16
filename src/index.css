@@ -1,0 +1,17 @@
+
+/* Make the web application fill the entire browser */
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global body styling */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  overflow-x: hidden;
+  background: none;
+}
