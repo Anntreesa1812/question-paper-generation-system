@@ -1,17 +1,7 @@
-import fitz  # PyMuPDF
-
-def extract_text_from_pdf(uploaded_file):
-    pdf_bytes = uploaded_file.file.read()
-    doc = fitz.open(stream=pdf_bytes, filetype="pdf")
-
-    text = ""
-    for page in doc:
-        text += page.get_text()
-
-    return text
+from syllabus import extract_text_from_pdf
 
 
-def chunk_text(text, chunk_size=150):
+def chunk_text(text, chunk_size=200):
     words = text.split()
     chunks = []
 
