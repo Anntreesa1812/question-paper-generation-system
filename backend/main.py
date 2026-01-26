@@ -6,6 +6,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from syllabus import extract_text_from_pdf as extract_syllabus_text, extract_module_topics
 from chunking import extract_text_from_pdf as extract_textbook_text, chunk_text
 from topic_chunk_mapping import map_topics_to_chunks
+from pattern.pattern_model import ExamPattern, QuestionPattern
+from pattern.pattern_controller import process_exam_pattern
+
 
 
 # --------------------------------------------------
@@ -114,4 +117,16 @@ def semantic_mapping():
     return {
         "message": "Semantic mapping completed successfully",
         "mapping": mapping
+    }
+
+@app.post("/set-question-pattern")
+async def set_question_pattern(pattern: ExamPattern):
+    generation_plan = process_exam_pattern(pattern)
+
+    with open("processed_data/question_pattern.json", "w") as f:
+        json.dump(generation_plan, f, indent=4)
+
+    return {
+        "message": "Question pattern saved successfully",
+        "generation_plan": generation_plan
     }
