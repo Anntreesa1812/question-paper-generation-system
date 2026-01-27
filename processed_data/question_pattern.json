@@ -1,0 +1,56 @@
+[
+    {
+        "question_no": 1,
+        "part": "PART A",
+        "marks": 2,
+        "module": "Module 1",
+        "bloom_level": "Remember",
+        "answer_type": "ALL",
+        "has_internal_choice": false
+    },
+    {
+        "question_no": 2,
+        "part": "PART A",
+        "marks": 2,
+        "module": "Module 2",
+        "bloom_level": "Understand",
+        "answer_type": "ALL",
+        "has_internal_choice": false
+    },
+    {
+        "question_no": 3,
+        "part": "PART A",
+        "marks": 2,
+        "module": "Module 3",
+        "bloom_level": "Understand",
+        "answer_type": "ALL",
+        "has_internal_choice": false
+    },
+    {
+        "question_no": 4,
+        "part": "PART A",
+        "marks": 2,
+        "module": "Module 4",
+        "bloom_level": "Apply",
+        "answer_type": "ALL",
+        "has_internal_choice": false
+    },
+    {
+        "question_no": 1,
+        "part": "PART B",
+        "marks": 12,
+        "module": "Module 1",
+        "bloom_level": "Analyze",
+        "answer_type": "ANY",
+        "has_internal_choice": true
+    },
+    {
+        "question_no": 2,
+        "part": "PART B",
+        "marks": 12,
+        "module": "Module 2",
+        "bloom_level": "Evaluate",
+        "answer_type": "ANY",
+        "has_internal_choice": true
+    }
+]

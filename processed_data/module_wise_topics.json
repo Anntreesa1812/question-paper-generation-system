@@ -1,0 +1,28 @@
+{
+  "Module I": [
+    "Introduction- Security problem in computing, Security in networks. Elementary cryptography-",
+    "Introduction-Substitution,Transposition,Hill Ciphers and Affine Ciphers.Review of number Theory-",
+    "Modular arithmetic."
+  ],
+  "Module II": [
+    "Encryption Algorithms- Symmetric key encryption - DES- The Feistel cipher structure. The avalanche",
+    "effect. Modes of operations of DES algorithm. AES-S-boxes."
+  ],
+  "Module III": [
+    "Public Key Encryption- RSA Cryptosystem. Primality testing-Miller-Rabin Algorithm.Key",
+    "Management-Diffie- Hellman- Cryptosystem-ElGamal Scheme Elliptical Curve Cryptography and",
+    "Elliptic curves over Finite Fields. Hash Algorithms- SHA 1 and SHA-512 MAC-HMAC."
+  ],
+  "Module IV": [
+    "Authentication protocols, Authentication applications-Kerberos,X.509,Digital Signature, Secure email,",
+    "SSL,IP Security - Intruders -Malicious Software,Firewalls.",
+    "1. Cryptography and Network Security \u2013 Principles and Practice: William Stallings, Pearson",
+    "Education, 6th Edition.",
+    "2. Cryptography and Network Security: Atul Kahate, Mc Graw Hill, 3rd Edition.",
+    "3. Cryptography and Network Security: C K Shyamala, N Harini, Dr T R Padmanabhan, Wiley",
+    "India, 1st Edition.",
+    "4. Cryptography and Network Security : Forouzan Mukhopadhyay, Mc Graw Hill, 3rd Edition.",
+    "5. Introduction to Network Security: Neal Krawetz, CENGAGE Learning.",
+    "6. Principles of Computer Security: WM. Arthur Conklin, Greg White, TMH."
+  ]
+}

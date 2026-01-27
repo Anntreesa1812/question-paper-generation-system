@@ -1,0 +1,60 @@
+{
+    "PART A": [
+        {
+            "question_no": 1,
+            "marks": 2,
+            "module": "Module 1",
+            "bloom_level": "Remember",
+            "text": "Define Primality testing",
+            "has_internal_choice": false,
+            "source_chunk": null
+        },
+        {
+            "question_no": 2,
+            "marks": 2,
+            "module": "Module 2",
+            "bloom_level": "Understand",
+            "text": "Summarize the key ideas of Malicious Software",
+            "has_internal_choice": false,
+            "source_chunk": null
+        },
+        {
+            "question_no": 3,
+            "marks": 2,
+            "module": "Module 3",
+            "bloom_level": "Understand",
+            "text": "Illustrate with examples: Firewalls",
+            "has_internal_choice": false,
+            "source_chunk": null
+        },
+        {
+            "question_no": 4,
+            "marks": 2,
+            "module": "Module 4",
+            "bloom_level": "Apply",
+            "text": "Solve the following problem using ElGamal Scheme Elliptical Curve Cryptography and:",
+            "has_internal_choice": false,
+            "source_chunk": null
+        }
+    ],
+    "PART B": [
+        {
+            "question_no": 1,
+            "marks": 12,
+            "module": "Module 1",
+            "bloom_level": "Analyze",
+            "text": "What are the causes and effects of Miller?",
+            "has_internal_choice": true,
+            "source_chunk": null
+        },
+        {
+            "question_no": 2,
+            "marks": 12,
+            "module": "Module 2",
+            "bloom_level": "Evaluate",
+            "text": "Compare the advantages and disadvantages of Public Key Encryption",
+            "has_internal_choice": true,
+            "source_chunk": null
+        }
+    ]
+}

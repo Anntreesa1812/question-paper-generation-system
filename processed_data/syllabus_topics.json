@@ -1,0 +1,49 @@
+{
+    "Module I": [
+        "Introduction",
+        "Security problem in computing",
+        "Security in networks",
+        "Elementary cryptography",
+        "Introduction",
+        "Substitution",
+        "Transposition",
+        "Hill Ciphers and Affine Ciphers",
+        "Review of number Theory",
+        "Modular arithmetic"
+    ],
+    "Module II": [
+        "Encryption Algorithms",
+        "Symmetric key encryption",
+        "The Feistel cipher structure",
+        "The avalanche",
+        "effect",
+        "Modes of operations of DES algorithm"
+    ],
+    "Module III": [
+        "Public Key Encryption",
+        "RSA Cryptosystem",
+        "Primality testing",
+        "Miller",
+        "Rabin Algorithm",
+        "Management",
+        "Diffie",
+        "Hellman",
+        "Cryptosystem",
+        "ElGamal Scheme Elliptical Curve Cryptography and",
+        "Elliptic curves over Finite Fields",
+        "Hash Algorithms",
+        "SHA 1 and SHA",
+        "512 MAC"
+    ],
+    "Module IV": [
+        "Authentication protocols",
+        "Authentication applications",
+        "Kerberos",
+        "Digital Signature",
+        "Secure email",
+        "IP Security",
+        "Intruders",
+        "Malicious Software",
+        "Firewalls"
+    ]
+}
