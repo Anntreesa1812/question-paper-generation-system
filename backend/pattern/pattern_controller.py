@@ -4,13 +4,20 @@ def process_exam_pattern(exam_pattern):
     #  validate_exam_pattern(exam_pattern)
 
     generation_plan = []
-    for q in exam_pattern.questions:
-        generation_plan.append({
-            "question_no": q.question_no,
-            "part": q.part,
-            "marks": q.marks,
-            "module": q.module,
-            "blooms_level": q.blooms_level
-        })
+    
+    # Process each part
+    for part in exam_pattern.parts:
+        # Process each question in the part
+        if part.questions:
+            for question in part.questions:
+                generation_plan.append({
+                    "question_no": question.question_no,
+                    "part": part.part_name,
+                    "marks": question.marks,
+                    "module": question.module,
+                    "bloom_level": question.bloom_level,
+                    "answer_type": part.answer_type,
+                    "has_internal_choice": question.has_internal_choice
+                })
 
     return generation_plan

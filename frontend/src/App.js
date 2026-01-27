@@ -49,6 +49,11 @@ function App() {
   // ---------- COLLAPSIBLE PARTS STATE ----------
   const [expandedParts, setExpandedParts] = useState([0]); // Default: first part expanded
 
+  // ---------- QUESTION GENERATION STATE ----------
+  const [generationLoading, setGenerationLoading] = useState(false);
+  const [generatedQuestions, setGeneratedQuestions] = useState(null);
+  const [generationError, setGenerationError] = useState(null);
+
   // ================================
   // SYLLABUS UPLOAD
   // ================================
@@ -266,6 +271,56 @@ function App() {
     return (
       parts[partIndex]?.questions?.reduce((sum, q) => sum + (q.marks || 0), 0) || 0
     );
+  };
+
+  // Generate questions
+  const generateQuestions = async () => {
+    if (!examName) {
+      setGenerationError("Please enter exam name");
+      return;
+    }
+
+    if (parts.length === 0) {
+      setGenerationError("Please add at least one part");
+      return;
+    }
+
+    setGenerationLoading(true);
+    setGenerationError(null);
+
+    const patternData = {
+      exam_name: examName,
+      parts: parts
+    };
+
+    try {
+      const response = await fetch(
+        "http://127.0.0.1:8000/generate-questions",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(patternData)
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setGenerationError(data.error || "Failed to generate questions");
+        return;
+      }
+
+      console.log("Generated Questions Response:", data);
+      setGeneratedQuestions(data.questions || {});
+      alert("Questions generated successfully!");
+    } catch (error) {
+      setGenerationError("Error: " + error.message);
+      console.error(error);
+    }
+
+    setGenerationLoading(false);
   };
 
   return (
@@ -642,6 +697,49 @@ function App() {
         >
           {patternLoading ? "Saving..." : "Save Question Pattern"}
         </button>
+
+        <button
+          onClick={generateQuestions}
+          disabled={generationLoading}
+          style={styles.generateButton}
+        >
+          {generationLoading ? "Generating..." : "🚀 Generate Questions"}
+        </button>
+
+        {generationError && (
+          <div style={styles.errorMessage}>
+            ❌ {generationError}
+          </div>
+        )}
+
+        {generatedQuestions && Object.keys(generatedQuestions).length > 0 && (
+          <section style={styles.generatedQuestionsSection}>
+            <h3 style={styles.generatedTitle}>✨ Generated Questions</h3>
+            {Object.entries(generatedQuestions).map(([partName, partQuestions]) => (
+              <div key={partName} style={styles.generatedPartBlock}>
+                <h4 style={styles.generatedPartName}>{partName}</h4>
+                {Array.isArray(partQuestions) ? (
+                  partQuestions.map((question, idx) => (
+                    <div key={idx} style={styles.generatedQuestionBlock}>
+                      <p style={styles.questionText}>
+                        <strong>Q{question.question_no || idx + 1} ({question.marks || 0} marks)</strong>
+                      </p>
+                      <p style={styles.questionContent}>{question.text || question.question || "Question text"}</p>
+                      {question.bloom_level && (
+                        <p style={styles.bloomTag}>Bloom Level: {question.bloom_level}</p>
+                      )}
+                      {question.module && (
+                        <p style={styles.moduleTag}>Module: {question.module}</p>
+                      )}
+                    </div>
+                  ))
+                ) : (
+                  <p style={styles.questionContent}>{partQuestions}</p>
+                )}
+              </div>
+            ))}
+          </section>
+        )}
       </section>
     </div>
   );
@@ -935,6 +1033,79 @@ const styles = {
     cursor: "pointer",
     fontSize: "16px",
     fontWeight: "500",
+    marginRight: "10px",
+  },
+  generateButton: {
+    background: "linear-gradient(135deg, #6366f1, #4f46e5)",
+    padding: "12px 30px",
+    borderRadius: "30px",
+    border: "none",
+    color: "#fff",
+    cursor: "pointer",
+    fontSize: "16px",
+    fontWeight: "500",
+  },
+  errorMessage: {
+    marginTop: "15px",
+    padding: "12px 16px",
+    backgroundColor: "rgba(239, 68, 68, 0.2)",
+    border: "1px solid rgba(239, 68, 68, 0.5)",
+    borderRadius: "8px",
+    color: "#fca5a5",
+    fontSize: "14px",
+  },
+  generatedQuestionsSection: {
+    marginTop: "30px",
+    padding: "20px",
+    backgroundColor: "rgba(34, 197, 94, 0.1)",
+    border: "2px solid rgba(74, 222, 128, 0.4)",
+    borderRadius: "12px",
+  },
+  generatedTitle: {
+    fontSize: "18px",
+    fontWeight: "600",
+    marginBottom: "20px",
+    color: "#86efac",
+  },
+  generatedPartBlock: {
+    marginBottom: "20px",
+    paddingBottom: "15px",
+    borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+  },
+  generatedPartName: {
+    fontSize: "15px",
+    fontWeight: "600",
+    color: "#60a5fa",
+    marginBottom: "12px",
+  },
+  generatedQuestionBlock: {
+    marginBottom: "15px",
+    padding: "12px",
+    backgroundColor: "rgba(0, 0, 0, 0.2)",
+    borderRadius: "8px",
+    borderLeft: "4px solid #fbbf24",
+  },
+  questionText: {
+    fontSize: "14px",
+    fontWeight: "600",
+    marginBottom: "8px",
+    color: "#fff",
+  },
+  questionContent: {
+    fontSize: "13px",
+    lineHeight: "1.6",
+    color: "rgba(255, 255, 255, 0.85)",
+    marginBottom: "8px",
+  },
+  bloomTag: {
+    fontSize: "12px",
+    color: "#a5f3fc",
+    marginTop: "6px",
+  },
+  moduleTag: {
+    fontSize: "12px",
+    color: "#d8b4fe",
+    marginTop: "4px",
   },
 };
 

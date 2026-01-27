@@ -7,8 +7,11 @@ class SubQuestionPattern(BaseModel):
 
 class QuestionPattern(BaseModel):
     question_no: int
-    sub_questions: Optional[List[SubQuestionPattern]] = None
+    marks: int
+    module: str
+    bloom_level: Optional[str] = "Remember"
     has_internal_choice: bool = False
+    sub_questions: Optional[List[SubQuestionPattern]] = None
 
 class PartPattern(BaseModel):
     part_name: str                 # PART A, PART B

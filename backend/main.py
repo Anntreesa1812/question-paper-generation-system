@@ -1,5 +1,10 @@
 import os
 import json
+import sys
+
+# Add backend directory to path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -8,6 +13,7 @@ from chunking import extract_text_from_pdf as extract_textbook_text, chunk_text
 from topic_chunk_mapping import map_topics_to_chunks
 from pattern.pattern_model import ExamPattern, QuestionPattern
 from pattern.pattern_controller import process_exam_pattern
+from question_generator import generate_questions_from_pattern
 
 
 
@@ -26,11 +32,16 @@ os.makedirs(PROCESSED_DATA_DIR, exist_ok=True)
 # --------------------------------------------------
 app = FastAPI()
 
+# Add CORS middleware BEFORE routes
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "http://localhost:5173",  # Vite default
+    ],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
 
@@ -121,12 +132,39 @@ def semantic_mapping():
 
 @app.post("/set-question-pattern")
 async def set_question_pattern(pattern: ExamPattern):
-    generation_plan = process_exam_pattern(pattern)
+    try:
+        generation_plan = process_exam_pattern(pattern)
 
-    with open("processed_data/question_pattern.json", "w") as f:
-        json.dump(generation_plan, f, indent=4)
+        pattern_path = os.path.join(PROCESSED_DATA_DIR, "question_pattern.json")
+        with open(pattern_path, "w", encoding="utf-8") as f:
+            json.dump(generation_plan, f, indent=4)
 
-    return {
-        "message": "Question pattern saved successfully",
-        "generation_plan": generation_plan
-    }
+        return {
+            "message": "Question pattern saved successfully",
+            "generation_plan": generation_plan
+        }
+    except Exception as e:
+        return {
+            "error": f"Failed to save question pattern: {str(e)}"
+        }, 400
+
+@app.post("/generate-questions")
+async def generate_questions(pattern: ExamPattern):
+    try:
+        # Generate questions based on pattern and available resources
+        generated_questions = generate_questions_from_pattern(pattern, PROCESSED_DATA_DIR)
+        
+        # Save generated questions
+        questions_path = os.path.join(PROCESSED_DATA_DIR, "generated_questions.json")
+        with open(questions_path, "w", encoding="utf-8") as f:
+            json.dump(generated_questions, f, indent=4)
+        
+        return {
+            "message": "Questions generated successfully",
+            "questions": generated_questions
+        }
+    
+    except Exception as e:
+        return {
+            "error": f"Failed to generate questions: {str(e)}"
+        }, 400
