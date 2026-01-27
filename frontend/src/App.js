@@ -5,13 +5,18 @@ const BLOOM_LEVELS = ["Remember", "Understand", "Apply", "Analyze", "Evaluate", 
 const MODULES = ["Module 1", "Module 2", "Module 3", "Module 4"];
 
 function App() {
+  // ---------- STEP MANAGEMENT ----------
+  const [currentStep, setCurrentStep] = useState(1);
+
   // ---------- SYLLABUS STATE ----------
   const [topics, setTopics] = useState(null);
+  const [syllabusFile, setSyllabusFile] = useState(null);
   const [syllabusLoading, setSyllabusLoading] = useState(false);
 
   // ---------- TEXTBOOK STATE ----------
   const [chunks, setChunks] = useState([]);
   const [chunkCount, setChunkCount] = useState(0);
+  const [textbookFile, setTextbookFile] = useState(null);
   const [textbookLoading, setTextbookLoading] = useState(false);
 
   // ---------- QUESTION PATTERN STATE ----------
@@ -47,7 +52,7 @@ function App() {
   ]);
 
   // ---------- COLLAPSIBLE PARTS STATE ----------
-  const [expandedParts, setExpandedParts] = useState([0]); // Default: first part expanded
+  const [expandedParts, setExpandedParts] = useState([0]);
 
   // ---------- QUESTION GENERATION STATE ----------
   const [generationLoading, setGenerationLoading] = useState(false);
@@ -428,7 +433,7 @@ function App() {
           const summary = calculateSummary();
           return (
             <div style={styles.summaryCard}>
-              <h3 style={styles.summaryTitle}>📊 Pattern Summary</h3>
+              <h3 style={styles.summaryTitle}>Pattern Summary</h3>
               <div style={styles.summaryGrid}>
                 <div style={styles.summaryItem}>
                   <span style={styles.summaryLabel}>Total Questions:</span>
@@ -703,18 +708,18 @@ function App() {
           disabled={generationLoading}
           style={styles.generateButton}
         >
-          {generationLoading ? "Generating..." : "🚀 Generate Questions"}
+          {generationLoading ? "Generating..." : "Generate Questions"}
         </button>
 
         {generationError && (
           <div style={styles.errorMessage}>
-            ❌ {generationError}
+            {generationError}
           </div>
         )}
 
         {generatedQuestions && Object.keys(generatedQuestions).length > 0 && (
           <section style={styles.generatedQuestionsSection}>
-            <h3 style={styles.generatedTitle}>✨ Generated Questions</h3>
+            <h3 style={styles.generatedTitle}>Generated Questions</h3>
             {Object.entries(generatedQuestions).map(([partName, partQuestions]) => (
               <div key={partName} style={styles.generatedPartBlock}>
                 <h4 style={styles.generatedPartName}>{partName}</h4>
