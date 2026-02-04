@@ -79,3 +79,13 @@ def extract_text_from_pdf(uploaded_file):
         ocr_text += pytesseract.image_to_string(img, lang="eng") + "\n"
 
     return ocr_text
+
+def extract_text_by_page(pdf_bytes):
+    doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+    pages_text = []
+
+    for page_number, page in enumerate(doc, start=1):
+        text = page.get_text("text")
+        pages_text.append((page_number, text))
+
+    return pages_text

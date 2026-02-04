@@ -15,8 +15,7 @@ from fastapi.middleware.cors import CORSMiddleware
 # --------------------------------------------------
 
 # Ingestion (PDF + OCR)
-from ingestion import extract_text_from_pdf as extract_textbook_text
-
+from ingestion import extract_text_by_page
 # Syllabus processing
 from syllabus import (
     extract_text_from_pdf as extract_syllabus_text,
@@ -24,8 +23,7 @@ from syllabus import (
 )
 
 # Text chunking
-from chunking import chunk_text
-
+from chunking import chunk_text_by_page
 # Semantic mapping
 from topic_chunk_mapping import map_topics_to_chunks
 
@@ -34,7 +32,7 @@ from pattern.pattern_model import ExamPattern
 from pattern.pattern_controller import process_exam_pattern
 from question_generator import generate_questions_from_pattern
 from image_extraction import extract_images_from_pdf
-
+from page_image_mapper import map_chunks_to_images
 
 # --------------------------------------------------
 # BASE PATH SETUP
@@ -92,11 +90,15 @@ async def extract_syllabus(file: UploadFile = File(...)):
 # --------------------------------------------------
 # STEP 2: TEXTBOOK INGESTION + CHUNKING
 # --------------------------------------------------
+
+
 @app.post("/chunk-textbook")
 def chunk_textbook(file: UploadFile = File(...)):
-    # ---------------------------------------
+    import shutil
+
+    # --------------------------------------------------
     # CLEAR OLD IMAGES (OPTION 2)
-    # ---------------------------------------
+    # --------------------------------------------------
     image_dir = os.path.join(PROCESSED_DATA_DIR, "images")
 
     if os.path.exists(image_dir):
@@ -104,20 +106,44 @@ def chunk_textbook(file: UploadFile = File(...)):
 
     os.makedirs(image_dir, exist_ok=True)
 
-    # ---------------------------------------
-    # TEXT INGESTION + CHUNKING
-    # ---------------------------------------
-    text = extract_textbook_text(file)
-    raw_chunks = chunk_text(text)
+    # --------------------------------------------------
+    # READ PDF ONCE
+    # --------------------------------------------------
+    pdf_bytes = file.file.read()
+    file.file.seek(0)
 
-    chunks = [
-        {"chunk_id": i + 1, "text": chunk}
-        for i, chunk in enumerate(raw_chunks)
-    ]
+    # --------------------------------------------------
+    # TEXT EXTRACTION WITH PAGE METADATA
+    # --------------------------------------------------
+    pages_text = extract_text_by_page(pdf_bytes)
 
-    chunks_path = os.path.join(PROCESSED_DATA_DIR, "textbook_chunks.json")
-    with open(chunks_path, "w", encoding="utf-8") as f:
-        json.dump(chunks, f, indent=4)
+    # --------------------------------------------------
+    # CHUNKING WITH PAGE METADATA
+    # --------------------------------------------------
+    chunks = chunk_text_by_page(pages_text)
+
+    # --------------------------------------------------
+    # IMAGE EXTRACTION (PAGE METADATA INCLUDED)
+    # --------------------------------------------------
+    images = extract_images_from_pdf(file, image_dir)
+
+    # --------------------------------------------------
+    # MAP CHUNKS ↔ IMAGES USING PAGE NUMBER
+    # --------------------------------------------------
+    final_chunks = map_chunks_to_images(chunks, images)
+
+    # --------------------------------------------------
+    # SAVE FINAL OUTPUT
+    # --------------------------------------------------
+    output_path = os.path.join(PROCESSED_DATA_DIR, "textbook_chunks.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(final_chunks, f, indent=4)
+
+    return {
+        "message": "Textbook processed successfully",
+        "total_chunks": len(final_chunks),
+        "total_images": len(images)
+    }
 
     # ---------------------------------------
     # IMAGE EXTRACTION

@@ -1,0 +1,1368 @@
+{
+    "Biometrics: Introduction": [
+        {
+            "chunk_id": 21,
+            "page": 18,
+            "score": 0.7906179428100586
+        },
+        {
+            "chunk_id": 19,
+            "page": 17,
+            "score": 0.7129079699516296
+        },
+        {
+            "chunk_id": 17,
+            "page": 16,
+            "score": 0.7120272517204285
+        },
+        {
+            "chunk_id": 50,
+            "page": 36,
+            "score": 0.6812978386878967
+        },
+        {
+            "chunk_id": 22,
+            "page": 19,
+            "score": 0.6644231677055359
+        },
+        {
+            "chunk_id": 142,
+            "page": 82,
+            "score": 0.6616064310073853
+        }
+    ],
+    "Biometrics versus traditional techniques": [
+        {
+            "chunk_id": 5,
+            "page": 6,
+            "score": 0.6981871128082275
+        },
+        {
+            "chunk_id": 17,
+            "page": 16,
+            "score": 0.6912602186203003
+        },
+        {
+            "chunk_id": 21,
+            "page": 18,
+            "score": 0.6903175711631775
+        },
+        {
+            "chunk_id": 19,
+            "page": 17,
+            "score": 0.6890552043914795
+        },
+        {
+            "chunk_id": 406,
+            "page": 229,
+            "score": 0.6839859485626221
+        },
+        {
+            "chunk_id": 35,
+            "page": 30,
+            "score": 0.6755955815315247
+        }
+    ],
+    "Characteristics": [
+        {
+            "chunk_id": 36,
+            "page": 31,
+            "score": 0.4059898555278778
+        }
+    ],
+    "Key biometric": [
+        {
+            "chunk_id": 35,
+            "page": 30,
+            "score": 0.7220783829689026
+        },
+        {
+            "chunk_id": 17,
+            "page": 16,
+            "score": 0.7038859128952026
+        },
+        {
+            "chunk_id": 269,
+            "page": 154,
+            "score": 0.6830164790153503
+        },
+        {
+            "chunk_id": 19,
+            "page": 17,
+            "score": 0.6741178035736084
+        },
+        {
+            "chunk_id": 22,
+            "page": 19,
+            "score": 0.6636340618133545
+        },
+        {
+            "chunk_id": 406,
+            "page": 229,
+            "score": 0.6625054478645325
+        }
+    ],
+    "processes": [
+        {
+            "chunk_id": 542,
+            "page": 293,
+            "score": 0.2704949676990509
+        }
+    ],
+    "Performance measures in biometric systems": [
+        {
+            "chunk_id": 69,
+            "page": 45,
+            "score": 0.7591473460197449
+        },
+        {
+            "chunk_id": 107,
+            "page": 61,
+            "score": 0.7446845173835754
+        },
+        {
+            "chunk_id": 26,
+            "page": 22,
+            "score": 0.6997017860412598
+        },
+        {
+            "chunk_id": 67,
+            "page": 44,
+            "score": 0.6968388557434082
+        },
+        {
+            "chunk_id": 108,
+            "page": 62,
+            "score": 0.6874041557312012
+        },
+        {
+            "chunk_id": 66,
+            "page": 43,
+            "score": 0.6772339940071106
+        }
+    ],
+    "Assessing the privacy risks of biometrics": [
+        {
+            "chunk_id": 503,
+            "page": 274,
+            "score": 0.8688527345657349
+        },
+        {
+            "chunk_id": 507,
+            "page": 276,
+            "score": 0.8150372505187988
+        },
+        {
+            "chunk_id": 550,
+            "page": 297,
+            "score": 0.8112746477127075
+        },
+        {
+            "chunk_id": 482,
+            "page": 266,
+            "score": 0.8068822026252747
+        },
+        {
+            "chunk_id": 462,
+            "page": 258,
+            "score": 0.7998607158660889
+        },
+        {
+            "chunk_id": 467,
+            "page": 260,
+            "score": 0.7718799114227295
+        }
+    ],
+    "Different biometric standards": [
+        {
+            "chunk_id": 461,
+            "page": 256,
+            "score": 0.775952935218811
+        },
+        {
+            "chunk_id": 552,
+            "page": 298,
+            "score": 0.7260984778404236
+        },
+        {
+            "chunk_id": 551,
+            "page": 298,
+            "score": 0.7181189060211182
+        },
+        {
+            "chunk_id": 66,
+            "page": 43,
+            "score": 0.7019715309143066
+        },
+        {
+            "chunk_id": 563,
+            "page": 303,
+            "score": 0.7009230256080627
+        },
+        {
+            "chunk_id": 14,
+            "page": 14,
+            "score": 0.6908254623413086
+        }
+    ],
+    "Designing and Selecting a biometric system": [
+        {
+            "chunk_id": 21,
+            "page": 18,
+            "score": 0.6998826861381531
+        },
+        {
+            "chunk_id": 541,
+            "page": 292,
+            "score": 0.6693278551101685
+        },
+        {
+            "chunk_id": 19,
+            "page": 17,
+            "score": 0.664633572101593
+        },
+        {
+            "chunk_id": 17,
+            "page": 16,
+            "score": 0.6629585027694702
+        },
+        {
+            "chunk_id": 109,
+            "page": 64,
+            "score": 0.6600607633590698
+        },
+        {
+            "chunk_id": 406,
+            "page": 229,
+            "score": 0.652617335319519
+        }
+    ],
+    "Application": [
+        {
+            "chunk_id": 330,
+            "page": 187,
+            "score": 0.48224902153015137
+        }
+    ],
+    "biometric terms and processes": [
+        {
+            "chunk_id": 35,
+            "page": 30,
+            "score": 0.7670513987541199
+        },
+        {
+            "chunk_id": 50,
+            "page": 36,
+            "score": 0.7611483335494995
+        },
+        {
+            "chunk_id": 36,
+            "page": 31,
+            "score": 0.7439782023429871
+        },
+        {
+            "chunk_id": 55,
+            "page": 38,
+            "score": 0.7226261496543884
+        },
+        {
+            "chunk_id": 285,
+            "page": 165,
+            "score": 0.6962827444076538
+        },
+        {
+            "chunk_id": 286,
+            "page": 165,
+            "score": 0.6941975355148315
+        }
+    ],
+    "Biometric matching methods": [
+        {
+            "chunk_id": 50,
+            "page": 36,
+            "score": 0.7302876710891724
+        },
+        {
+            "chunk_id": 118,
+            "page": 70,
+            "score": 0.6807278990745544
+        },
+        {
+            "chunk_id": 66,
+            "page": 43,
+            "score": 0.6630616784095764
+        },
+        {
+            "chunk_id": 222,
+            "page": 130,
+            "score": 0.6387890577316284
+        },
+        {
+            "chunk_id": 60,
+            "page": 41,
+            "score": 0.6381598711013794
+        },
+        {
+            "chunk_id": 480,
+            "page": 266,
+            "score": 0.6368786096572876
+        }
+    ],
+    "Accuracy in biometric system": [
+        {
+            "chunk_id": 108,
+            "page": 62,
+            "score": 0.7567893266677856
+        },
+        {
+            "chunk_id": 84,
+            "page": 50,
+            "score": 0.74601811170578
+        },
+        {
+            "chunk_id": 107,
+            "page": 61,
+            "score": 0.7158979177474976
+        },
+        {
+            "chunk_id": 69,
+            "page": 45,
+            "score": 0.6953893899917603
+        },
+        {
+            "chunk_id": 62,
+            "page": 41,
+            "score": 0.6885043978691101
+        },
+        {
+            "chunk_id": 67,
+            "page": 44,
+            "score": 0.6882063746452332
+        }
+    ],
+    "Physical Biometrics: Fingerprints": [
+        {
+            "chunk_id": 142,
+            "page": 82,
+            "score": 0.6652105450630188
+        },
+        {
+            "chunk_id": 118,
+            "page": 70,
+            "score": 0.6548939943313599
+        },
+        {
+            "chunk_id": 121,
+            "page": 72,
+            "score": 0.652057409286499
+        },
+        {
+            "chunk_id": 67,
+            "page": 44,
+            "score": 0.6508374214172363
+        },
+        {
+            "chunk_id": 482,
+            "page": 266,
+            "score": 0.644181489944458
+        },
+        {
+            "chunk_id": 130,
+            "page": 76,
+            "score": 0.64388108253479
+        }
+    ],
+    "Technical description": [
+        {
+            "chunk_id": 330,
+            "page": 187,
+            "score": 0.41214239597320557
+        }
+    ],
+    "Competing technology": [
+        {
+            "chunk_id": 330,
+            "page": 187,
+            "score": 0.5405688285827637
+        },
+        {
+            "chunk_id": 383,
+            "page": 217,
+            "score": 0.46284207701683044
+        }
+    ],
+    "Strengths": [
+        {
+            "chunk_id": 525,
+            "page": 284,
+            "score": 0.2466639131307602
+        }
+    ],
+    "Weaknesses": [
+        {
+            "chunk_id": 356,
+            "page": 201,
+            "score": 0.3803770840167999
+        }
+    ],
+    "Deployments": [
+        {
+            "chunk_id": 477,
+            "page": 264,
+            "score": 0.48584890365600586
+        }
+    ],
+    "Facial  scan  technical  description": [
+        {
+            "chunk_id": 151,
+            "page": 88,
+            "score": 0.6987576484680176
+        },
+        {
+            "chunk_id": 146,
+            "page": 86,
+            "score": 0.6946830153465271
+        },
+        {
+            "chunk_id": 152,
+            "page": 89,
+            "score": 0.6631752252578735
+        },
+        {
+            "chunk_id": 144,
+            "page": 85,
+            "score": 0.656688392162323
+        },
+        {
+            "chunk_id": 143,
+            "page": 84,
+            "score": 0.6532453298568726
+        },
+        {
+            "chunk_id": 147,
+            "page": 86,
+            "score": 0.6517809629440308
+        }
+    ],
+    "Retina  vascular  pattern  Technical  description": [
+        {
+            "chunk_id": 221,
+            "page": 130,
+            "score": 0.5964154005050659
+        },
+        {
+            "chunk_id": 173,
+            "page": 101,
+            "score": 0.5302732586860657
+        },
+        {
+            "chunk_id": 218,
+            "page": 128,
+            "score": 0.48554885387420654
+        },
+        {
+            "chunk_id": 219,
+            "page": 129,
+            "score": 0.4824386537075043
+        },
+        {
+            "chunk_id": 216,
+            "page": 127,
+            "score": 0.4801052510738373
+        },
+        {
+            "chunk_id": 222,
+            "page": 130,
+            "score": 0.47001639008522034
+        }
+    ],
+    "Strength": [
+        {
+            "chunk_id": 274,
+            "page": 156,
+            "score": 0.23658853769302368
+        }
+    ],
+    "Facial  scan": [
+        {
+            "chunk_id": 152,
+            "page": 89,
+            "score": 0.662968099117279
+        },
+        {
+            "chunk_id": 151,
+            "page": 88,
+            "score": 0.6619019508361816
+        },
+        {
+            "chunk_id": 147,
+            "page": 86,
+            "score": 0.6585475206375122
+        },
+        {
+            "chunk_id": 146,
+            "page": 86,
+            "score": 0.6566356420516968
+        },
+        {
+            "chunk_id": 143,
+            "page": 84,
+            "score": 0.6545207500457764
+        },
+        {
+            "chunk_id": 149,
+            "page": 87,
+            "score": 0.6375210881233215
+        }
+    ],
+    "Ear  scan": [
+        {
+            "chunk_id": 7,
+            "page": 8,
+            "score": 0.4724563956260681
+        },
+        {
+            "chunk_id": 141,
+            "page": 82,
+            "score": 0.45363837480545044
+        },
+        {
+            "chunk_id": 185,
+            "page": 108,
+            "score": 0.45239102840423584
+        },
+        {
+            "chunk_id": 206,
+            "page": 122,
+            "score": 0.4519538879394531
+        }
+    ],
+    "Retina  scan": [
+        {
+            "chunk_id": 216,
+            "page": 127,
+            "score": 0.7151622772216797
+        },
+        {
+            "chunk_id": 228,
+            "page": 133,
+            "score": 0.6916400790214539
+        },
+        {
+            "chunk_id": 219,
+            "page": 129,
+            "score": 0.6653118133544922
+        },
+        {
+            "chunk_id": 218,
+            "page": 128,
+            "score": 0.65439772605896
+        },
+        {
+            "chunk_id": 225,
+            "page": 132,
+            "score": 0.6455446481704712
+        },
+        {
+            "chunk_id": 221,
+            "page": 130,
+            "score": 0.6391749382019043
+        }
+    ],
+    "Iris  scan": [
+        {
+            "chunk_id": 172,
+            "page": 101,
+            "score": 0.6908586621284485
+        },
+        {
+            "chunk_id": 167,
+            "page": 98,
+            "score": 0.6854276061058044
+        },
+        {
+            "chunk_id": 180,
+            "page": 105,
+            "score": 0.6821310520172119
+        },
+        {
+            "chunk_id": 173,
+            "page": 101,
+            "score": 0.6677456498146057
+        },
+        {
+            "chunk_id": 181,
+            "page": 105,
+            "score": 0.659500241279602
+        },
+        {
+            "chunk_id": 184,
+            "page": 107,
+            "score": 0.6562263369560242
+        }
+    ],
+    "Automated fingerprint identification system": [
+        {
+            "chunk_id": 239,
+            "page": 139,
+            "score": 0.6388698220252991
+        },
+        {
+            "chunk_id": 130,
+            "page": 76,
+            "score": 0.6170543432235718
+        },
+        {
+            "chunk_id": 230,
+            "page": 135,
+            "score": 0.5831174254417419
+        },
+        {
+            "chunk_id": 234,
+            "page": 137,
+            "score": 0.5703833103179932
+        },
+        {
+            "chunk_id": 135,
+            "page": 79,
+            "score": 0.5636863708496094
+        },
+        {
+            "chunk_id": 121,
+            "page": 72,
+            "score": 0.5511651635169983
+        }
+    ],
+    "Palm print": [
+        {
+            "chunk_id": 207,
+            "page": 122,
+            "score": 0.45035165548324585
+        }
+    ],
+    "Hand vascular geometry analysis": [
+        {
+            "chunk_id": 212,
+            "page": 125,
+            "score": 0.46085745096206665
+        },
+        {
+            "chunk_id": 207,
+            "page": 122,
+            "score": 0.4606492221355438
+        }
+    ],
+    "Knuckle": [
+        {
+            "chunk_id": 207,
+            "page": 122,
+            "score": 0.25665467977523804
+        }
+    ],
+    "Dental": [
+        {
+            "chunk_id": 143,
+            "page": 84,
+            "score": 0.29860979318618774
+        }
+    ],
+    "Cognitive Biometrics": [
+        {
+            "chunk_id": 36,
+            "page": 31,
+            "score": 0.6376758813858032
+        },
+        {
+            "chunk_id": 35,
+            "page": 30,
+            "score": 0.6314243078231812
+        },
+        {
+            "chunk_id": 295,
+            "page": 170,
+            "score": 0.6280670762062073
+        },
+        {
+            "chunk_id": 84,
+            "page": 50,
+            "score": 0.6166185736656189
+        },
+        {
+            "chunk_id": 347,
+            "page": 196,
+            "score": 0.6109552383422852
+        },
+        {
+            "chunk_id": 108,
+            "page": 62,
+            "score": 0.6092917323112488
+        }
+    ],
+    "Behavioural Biometrics: Handprint biometrics": [
+        {
+            "chunk_id": 118,
+            "page": 70,
+            "score": 0.6239928007125854
+        },
+        {
+            "chunk_id": 36,
+            "page": 31,
+            "score": 0.6188738346099854
+        },
+        {
+            "chunk_id": 249,
+            "page": 144,
+            "score": 0.6156098246574402
+        },
+        {
+            "chunk_id": 482,
+            "page": 266,
+            "score": 0.6102033853530884
+        },
+        {
+            "chunk_id": 505,
+            "page": 275,
+            "score": 0.606414794921875
+        },
+        {
+            "chunk_id": 406,
+            "page": 229,
+            "score": 0.5891384482383728
+        }
+    ],
+    "Signature and handwriting technology": [
+        {
+            "chunk_id": 261,
+            "page": 150,
+            "score": 0.7203523516654968
+        },
+        {
+            "chunk_id": 266,
+            "page": 152,
+            "score": 0.6726752519607544
+        },
+        {
+            "chunk_id": 255,
+            "page": 147,
+            "score": 0.6715936064720154
+        },
+        {
+            "chunk_id": 265,
+            "page": 152,
+            "score": 0.6409107446670532
+        },
+        {
+            "chunk_id": 250,
+            "page": 145,
+            "score": 0.6402666568756104
+        },
+        {
+            "chunk_id": 252,
+            "page": 146,
+            "score": 0.6340576410293579
+        }
+    ],
+    "Technical": [
+        {
+            "chunk_id": 330,
+            "page": 187,
+            "score": 0.32427364587783813
+        }
+    ],
+    "description \u2013 Classification": [
+        {
+            "chunk_id": 40,
+            "page": 32,
+            "score": 0.30369722843170166
+        }
+    ],
+    "Comprehensive packet logging": [
+        {
+            "chunk_id": 4,
+            "page": 4,
+            "score": 0.3590230643749237
+        }
+    ],
+    "Keyboard or keystroke dynamics": [
+        {
+            "chunk_id": 271,
+            "page": 155,
+            "score": 0.4882057309150696
+        }
+    ],
+    "Data acquisition": [
+        {
+            "chunk_id": 206,
+            "page": 122,
+            "score": 0.44894546270370483
+        }
+    ],
+    "Feature extraction": [
+        {
+            "chunk_id": 56,
+            "page": 39,
+            "score": 0.5407549142837524
+        },
+        {
+            "chunk_id": 55,
+            "page": 38,
+            "score": 0.47251588106155396
+        }
+    ],
+    "Weakness": [
+        {
+            "chunk_id": 94,
+            "page": 55,
+            "score": 0.26361608505249023
+        }
+    ],
+    "Deployment": [
+        {
+            "chunk_id": 477,
+            "page": 264,
+            "score": 0.41707032918930054
+        }
+    ],
+    "recognition": [
+        {
+            "chunk_id": 157,
+            "page": 92,
+            "score": 0.4604652225971222
+        }
+    ],
+    "Gesture recognition": [
+        {
+            "chunk_id": 206,
+            "page": 122,
+            "score": 0.38404715061187744
+        }
+    ],
+    "Video face": [
+        {
+            "chunk_id": 146,
+            "page": 86,
+            "score": 0.47755923867225647
+        },
+        {
+            "chunk_id": 335,
+            "page": 190,
+            "score": 0.47257545590400696
+        },
+        {
+            "chunk_id": 149,
+            "page": 87,
+            "score": 0.45998087525367737
+        }
+    ],
+    "Mapping the body technology": [
+        {
+            "chunk_id": 218,
+            "page": 128,
+            "score": 0.45869481563568115
+        }
+    ],
+    "Multi Biometrics and": [
+        {
+            "chunk_id": 355,
+            "page": 200,
+            "score": 0.6711416840553284
+        },
+        {
+            "chunk_id": 50,
+            "page": 36,
+            "score": 0.6490027904510498
+        },
+        {
+            "chunk_id": 26,
+            "page": 22,
+            "score": 0.6490013003349304
+        },
+        {
+            "chunk_id": 59,
+            "page": 40,
+            "score": 0.6385856866836548
+        },
+        {
+            "chunk_id": 21,
+            "page": 18,
+            "score": 0.6331545114517212
+        },
+        {
+            "chunk_id": 35,
+            "page": 30,
+            "score": 0.6299629211425781
+        }
+    ],
+    "Multi Factor biometrics": [
+        {
+            "chunk_id": 295,
+            "page": 170,
+            "score": 0.5934547185897827
+        },
+        {
+            "chunk_id": 35,
+            "page": 30,
+            "score": 0.5750343799591064
+        },
+        {
+            "chunk_id": 482,
+            "page": 266,
+            "score": 0.5730825066566467
+        },
+        {
+            "chunk_id": 107,
+            "page": 61,
+            "score": 0.5683967471122742
+        },
+        {
+            "chunk_id": 267,
+            "page": 153,
+            "score": 0.563259482383728
+        },
+        {
+            "chunk_id": 68,
+            "page": 44,
+            "score": 0.5629544854164124
+        }
+    ],
+    "Two factor authentication with password": [
+        {
+            "chunk_id": 280,
+            "page": 159,
+            "score": 0.4067941904067993
+        }
+    ],
+    "Tickets and tokens": [
+        {
+            "chunk_id": 410,
+            "page": 231,
+            "score": 0.3029935359954834
+        }
+    ],
+    "USER INTERFACES: Biometric interfaces: Human machine interface": [
+        {
+            "chunk_id": 19,
+            "page": 17,
+            "score": 0.6674317717552185
+        },
+        {
+            "chunk_id": 14,
+            "page": 14,
+            "score": 0.64821857213974
+        },
+        {
+            "chunk_id": 21,
+            "page": 18,
+            "score": 0.6343681812286377
+        },
+        {
+            "chunk_id": 35,
+            "page": 30,
+            "score": 0.6220636367797852
+        },
+        {
+            "chunk_id": 554,
+            "page": 299,
+            "score": 0.6182933449745178
+        },
+        {
+            "chunk_id": 108,
+            "page": 62,
+            "score": 0.6116565465927124
+        }
+    ],
+    "BHMI structure": [
+        {
+            "chunk_id": 126,
+            "page": 74,
+            "score": 0.17702342569828033
+        }
+    ],
+    "side interface: Iris image interface": [
+        {
+            "chunk_id": 181,
+            "page": 105,
+            "score": 0.6179162263870239
+        },
+        {
+            "chunk_id": 168,
+            "page": 99,
+            "score": 0.6174811720848083
+        },
+        {
+            "chunk_id": 172,
+            "page": 101,
+            "score": 0.6112968921661377
+        },
+        {
+            "chunk_id": 167,
+            "page": 98,
+            "score": 0.6034166812896729
+        },
+        {
+            "chunk_id": 170,
+            "page": 100,
+            "score": 0.5961424112319946
+        },
+        {
+            "chunk_id": 169,
+            "page": 99,
+            "score": 0.5889774560928345
+        }
+    ],
+    "Hand geometry and fingerprint sensor": [
+        {
+            "chunk_id": 207,
+            "page": 122,
+            "score": 0.6394569277763367
+        },
+        {
+            "chunk_id": 204,
+            "page": 120,
+            "score": 0.6357020735740662
+        },
+        {
+            "chunk_id": 142,
+            "page": 82,
+            "score": 0.6106791496276855
+        },
+        {
+            "chunk_id": 130,
+            "page": 76,
+            "score": 0.5878891944885254
+        },
+        {
+            "chunk_id": 214,
+            "page": 126,
+            "score": 0.5861372947692871
+        },
+        {
+            "chunk_id": 213,
+            "page": 126,
+            "score": 0.5808539390563965
+        }
+    ],
+    "Executive decision": [
+        {
+            "chunk_id": 498,
+            "page": 273,
+            "score": 0.2570558190345764
+        }
+    ],
+    "Implementation plan": [
+        {
+            "chunk_id": 586,
+            "page": 315,
+            "score": 0.3286529779434204
+        }
+    ],
+    "Case study on physiological": [
+        {
+            "chunk_id": 36,
+            "page": 31,
+            "score": 0.3749668598175049
+        }
+    ],
+    "Behavioural and multi factor biometrics in": [
+        {
+            "chunk_id": 36,
+            "page": 31,
+            "score": 0.6606278419494629
+        },
+        {
+            "chunk_id": 505,
+            "page": 275,
+            "score": 0.640891432762146
+        },
+        {
+            "chunk_id": 35,
+            "page": 30,
+            "score": 0.6346813440322876
+        },
+        {
+            "chunk_id": 482,
+            "page": 266,
+            "score": 0.6320659518241882
+        },
+        {
+            "chunk_id": 254,
+            "page": 146,
+            "score": 0.6289660334587097
+        },
+        {
+            "chunk_id": 295,
+            "page": 170,
+            "score": 0.619642436504364
+        }
+    ],
+    "identification system": [
+        {
+            "chunk_id": 42,
+            "page": 33,
+            "score": 0.5771404504776001
+        },
+        {
+            "chunk_id": 44,
+            "page": 34,
+            "score": 0.5491753220558167
+        },
+        {
+            "chunk_id": 40,
+            "page": 32,
+            "score": 0.543797492980957
+        },
+        {
+            "chunk_id": 37,
+            "page": 31,
+            "score": 0.5343414545059204
+        },
+        {
+            "chunk_id": 319,
+            "page": 183,
+            "score": 0.5259076356887817
+        },
+        {
+            "chunk_id": 318,
+            "page": 182,
+            "score": 0.5203450918197632
+        }
+    ],
+    "Categorizing biometric applications": [
+        {
+            "chunk_id": 284,
+            "page": 164,
+            "score": 0.8028287887573242
+        },
+        {
+            "chunk_id": 285,
+            "page": 165,
+            "score": 0.7297782897949219
+        },
+        {
+            "chunk_id": 290,
+            "page": 167,
+            "score": 0.6954835057258606
+        },
+        {
+            "chunk_id": 118,
+            "page": 70,
+            "score": 0.6858310699462891
+        },
+        {
+            "chunk_id": 295,
+            "page": 170,
+            "score": 0.6857578158378601
+        },
+        {
+            "chunk_id": 36,
+            "page": 31,
+            "score": 0.6673579216003418
+        }
+    ],
+    "Application areas: Criminal and citizen": [
+        {
+            "chunk_id": 311,
+            "page": 179,
+            "score": 0.5375572443008423
+        },
+        {
+            "chunk_id": 297,
+            "page": 172,
+            "score": 0.5314196944236755
+        },
+        {
+            "chunk_id": 309,
+            "page": 178,
+            "score": 0.509537398815155
+        },
+        {
+            "chunk_id": 303,
+            "page": 176,
+            "score": 0.477217435836792
+        },
+        {
+            "chunk_id": 310,
+            "page": 179,
+            "score": 0.47375065088272095
+        },
+        {
+            "chunk_id": 10,
+            "page": 11,
+            "score": 0.4665192663669586
+        }
+    ],
+    "identification \u2013 Surveillance": [
+        {
+            "chunk_id": 325,
+            "page": 185,
+            "score": 0.5537880063056946
+        },
+        {
+            "chunk_id": 334,
+            "page": 190,
+            "score": 0.5388538241386414
+        },
+        {
+            "chunk_id": 289,
+            "page": 166,
+            "score": 0.5355885028839111
+        },
+        {
+            "chunk_id": 326,
+            "page": 186,
+            "score": 0.534027099609375
+        },
+        {
+            "chunk_id": 329,
+            "page": 187,
+            "score": 0.5240508317947388
+        },
+        {
+            "chunk_id": 414,
+            "page": 233,
+            "score": 0.5080931782722473
+        }
+    ],
+    "PC/network access": [
+        {
+            "chunk_id": 348,
+            "page": 197,
+            "score": 0.5073126554489136
+        },
+        {
+            "chunk_id": 337,
+            "page": 193,
+            "score": 0.49400466680526733
+        },
+        {
+            "chunk_id": 340,
+            "page": 194,
+            "score": 0.4760492742061615
+        },
+        {
+            "chunk_id": 287,
+            "page": 166,
+            "score": 0.4712867736816406
+        },
+        {
+            "chunk_id": 357,
+            "page": 201,
+            "score": 0.45885446667671204
+        },
+        {
+            "chunk_id": 368,
+            "page": 207,
+            "score": 0.4549795985221863
+        }
+    ],
+    "commerce and retail/ATM": [
+        {
+            "chunk_id": 391,
+            "page": 222,
+            "score": 0.5461417436599731
+        },
+        {
+            "chunk_id": 395,
+            "page": 224,
+            "score": 0.5159955024719238
+        },
+        {
+            "chunk_id": 393,
+            "page": 223,
+            "score": 0.5095921158790588
+        },
+        {
+            "chunk_id": 392,
+            "page": 222,
+            "score": 0.5086109638214111
+        },
+        {
+            "chunk_id": 398,
+            "page": 225,
+            "score": 0.4985034167766571
+        },
+        {
+            "chunk_id": 11,
+            "page": 12,
+            "score": 0.49498695135116577
+        }
+    ],
+    "Costs to deploy": [
+        {
+            "chunk_id": 352,
+            "page": 199,
+            "score": 0.43510502576828003
+        }
+    ],
+    "Issues in deployment": [
+        {
+            "chunk_id": 477,
+            "page": 264,
+            "score": 0.3411027193069458
+        }
+    ],
+    "Biometrics in medicine": [
+        {
+            "chunk_id": 35,
+            "page": 30,
+            "score": 0.6734715104103088
+        },
+        {
+            "chunk_id": 36,
+            "page": 31,
+            "score": 0.6617575883865356
+        },
+        {
+            "chunk_id": 282,
+            "page": 162,
+            "score": 0.6617342233657837
+        },
+        {
+            "chunk_id": 505,
+            "page": 275,
+            "score": 0.6579939126968384
+        },
+        {
+            "chunk_id": 552,
+            "page": 298,
+            "score": 0.6519310474395752
+        },
+        {
+            "chunk_id": 19,
+            "page": 17,
+            "score": 0.6492913365364075
+        }
+    ],
+    "cancellable biometrics": [
+        {
+            "chunk_id": 541,
+            "page": 292,
+            "score": 0.6372188925743103
+        },
+        {
+            "chunk_id": 533,
+            "page": 288,
+            "score": 0.6243717670440674
+        },
+        {
+            "chunk_id": 535,
+            "page": 289,
+            "score": 0.612932026386261
+        },
+        {
+            "chunk_id": 22,
+            "page": 19,
+            "score": 0.6027324795722961
+        },
+        {
+            "chunk_id": 101,
+            "page": 58,
+            "score": 0.6025832891464233
+        },
+        {
+            "chunk_id": 482,
+            "page": 266,
+            "score": 0.6006060838699341
+        }
+    ]
+}
