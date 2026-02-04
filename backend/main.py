@@ -1,7 +1,7 @@
 import os
 import json
 import sys
-
+import shutil
 # --------------------------------------------------
 # ADD BACKEND DIRECTORY TO PATH
 # --------------------------------------------------
@@ -94,10 +94,20 @@ async def extract_syllabus(file: UploadFile = File(...)):
 # --------------------------------------------------
 @app.post("/chunk-textbook")
 def chunk_textbook(file: UploadFile = File(...)):
-    # Ingestion layer (PDF + OCR)
-    text = extract_textbook_text(file)
+    # ---------------------------------------
+    # CLEAR OLD IMAGES (OPTION 2)
+    # ---------------------------------------
+    image_dir = os.path.join(PROCESSED_DATA_DIR, "images")
 
-    # Chunking layer
+    if os.path.exists(image_dir):
+        shutil.rmtree(image_dir)
+
+    os.makedirs(image_dir, exist_ok=True)
+
+    # ---------------------------------------
+    # TEXT INGESTION + CHUNKING
+    # ---------------------------------------
+    text = extract_textbook_text(file)
     raw_chunks = chunk_text(text)
 
     chunks = [
@@ -108,14 +118,17 @@ def chunk_textbook(file: UploadFile = File(...)):
     chunks_path = os.path.join(PROCESSED_DATA_DIR, "textbook_chunks.json")
     with open(chunks_path, "w", encoding="utf-8") as f:
         json.dump(chunks, f, indent=4)
-    image_output_dir = os.path.join(PROCESSED_DATA_DIR, "images")
-    image_count = extract_images_from_pdf(file, image_output_dir)
+
+    # ---------------------------------------
+    # IMAGE EXTRACTION
+    # ---------------------------------------
+    image_count = extract_images_from_pdf(file, image_dir)
 
     return {
-        "message": "Textbook ingested and chunked successfully",
+        "message": "Textbook processed successfully",
         "total_chunks": len(chunks),
         "images_extracted": image_count
-    }    
+    }
 
 
 # --------------------------------------------------
