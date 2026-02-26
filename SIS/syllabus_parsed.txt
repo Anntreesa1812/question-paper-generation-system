@@ -1,0 +1,83 @@
+MODULE I:
+  - Biometrics: Introduction
+  - Biometrics Versus Traditional Techniques
+  - Characteristics
+  - Key Biometric Processes
+  - Performance Measures In Biometric Systems
+  - Assessing The Privacy Risks Of Biometrics
+  - Different Biometric Standards
+  - Designing And Selecting A Biometric System
+  - Application
+  - Key Biometric Terms And Processes
+  - Biometric Matching Methods
+  - Accuracy In Biometric System
+
+MODULE II:
+  - Physical Biometrics: Fingerprints
+  - Technical Description
+  - Characteristics
+  - Competing Technology
+  - Strengths
+  - Weaknesses
+  - Deployments
+  - Facial Scan Technical Description
+  - Characteristics
+  - Weaknesses
+  - Deployments
+  - Retina Vascular Pattern Technical Description
+  - Characteristics
+  - Strength
+  - Weaknesses
+  - Deployments
+  - Facial Scan
+  - Ear Scan
+  - Retina Scan
+  - Iris Scan
+  - Automated Fingerprint Identification System
+  - Palm Print
+  - Hand Vascular Geometry Analysis
+  - Knuckle
+  - Dental
+  - Cognitive Biometrics
+
+MODULE III:
+  - Behavioural Biometrics: Handprint Biometrics
+  - Signature And Handwriting Technology
+  - Technical Description
+  - Classification
+  - Comprehensive Packet Logging
+  - Keyboard Or Keystroke Dynamics
+  - Voice
+  - Data Acquisition
+  - Feature Extraction
+  - Characteristics
+  - Strength
+  - Weakness
+  - Deployment
+  - Gait Recognition
+  - Gesture Recognition
+  - Video Face
+  - Mapping The Body Technology
+  - Multi Biometrics And Multi Factor Biometrics
+  - Two Factor Authentication With Password
+  - Tickets And Tokens
+
+MODULE IV:
+  - User Interfaces: Biometric Interfaces: Human Machine Interface
+  - Bhmi Structure
+  - Human Side Interface: Iris Image Interface
+  - Hand Geometry And Fingerprint Sensor
+  - Executive Decision
+  - Implementation Plan
+  - Case Study On Physiological
+  - Behavioural And Multi Factor Biometrics In Identification System
+  - Categorizing Biometric Applications
+  - Application Areas: Criminal And Citizen Identification
+  - Surveillance
+  - Pc/Network Access
+  - E-Commerce And Retail/Atm
+  - Costs To Deploy
+  - Issues In Deployment
+  - Biometrics In Medicine
+  - Cancellable Biometrics
+

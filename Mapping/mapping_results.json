@@ -1,0 +1,526 @@
+[
+  {
+    "id": 1,
+    "module": "MODULE I",
+    "topic": "Biometrics: Introduction",
+    "matches": [
+      {
+        "chunk_id": 516,
+        "page": 511,
+        "score": 0.5326,
+        "text": "488 / User Authentication Electronic facial image: For biometric authentication. Asymmetric Card Authentication Key: Asymmetric key pair and corresponding certificate used for card authentication. Optional elements include the following: Digital Signature Key: Asymmetric key pair and corresponding certificate that supports document signing and signing of data elements such as the CHUID. Key Management Key: Asymmetric key pair and corresponding certificate supporting key establishment and transport. Symmetric Card Authentication Key: For supporting physical access applications. PIV Card Application Administration Key: Symmetric key associated with the card management system. One or two iris images: For biometric authentication. Table 15.5 lists the algorithm and key size requirements for PIV key types. Authentication Using the electronic credentials resident on a PIV card, the card supports the following authentication mechanisms: CHUID: The cardholder is authenticated using the signed CHUID data element on the card. This mechanism is useful in environments where a low level of assurance is acceptable and rapid contactless authentication is necessary. Table 15.5 PIV Algorithms and Key Sizes PIV Key Type Algorithms Key Sizes (bits) Application PIV Authentication Key RSA 2048 Supports card and cardholder authentication for an interoperable environment ECDSA 256 Card Authentication Key 3. TDEA 168 Supports card authentication for physical access AES 128, 192, or 256 RSA 2048 Supports card authentication for an interoperable environment ECDSA 256 Digital Signature Key RSA 2048 or 3072 Supports document signing and nonce signing ECDSA 256 or 384 Key Management Key RSA 2048 Supports key establishment and transport ECDH 256 or 384"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "module": "MODULE I",
+    "topic": "Biometrics Versus Traditional Techniques",
+    "matches": []
+  },
+  {
+    "id": 3,
+    "module": "MODULE I",
+    "topic": "Characteristics in Biometrics Versus Traditional Techniques",
+    "matches": [
+      {
+        "chunk_id": 516,
+        "page": 511,
+        "score": 0.5012,
+        "text": "488 / User Authentication Electronic facial image: For biometric authentication. Asymmetric Card Authentication Key: Asymmetric key pair and corresponding certificate used for card authentication. Optional elements include the following: Digital Signature Key: Asymmetric key pair and corresponding certificate that supports document signing and signing of data elements such as the CHUID. Key Management Key: Asymmetric key pair and corresponding certificate supporting key establishment and transport. Symmetric Card Authentication Key: For supporting physical access applications. PIV Card Application Administration Key: Symmetric key associated with the card management system. One or two iris images: For biometric authentication. Table 15.5 lists the algorithm and key size requirements for PIV key types. Authentication Using the electronic credentials resident on a PIV card, the card supports the following authentication mechanisms: CHUID: The cardholder is authenticated using the signed CHUID data element on the card. This mechanism is useful in environments where a low level of assurance is acceptable and rapid contactless authentication is necessary. Table 15.5 PIV Algorithms and Key Sizes PIV Key Type Algorithms Key Sizes (bits) Application PIV Authentication Key RSA 2048 Supports card and cardholder authentication for an interoperable environment ECDSA 256 Card Authentication Key 3. TDEA 168 Supports card authentication for physical access AES 128, 192, or 256 RSA 2048 Supports card authentication for an interoperable environment ECDSA 256 Digital Signature Key RSA 2048 or 3072 Supports document signing and nonce signing ECDSA 256 or 384 Key Management Key RSA 2048 Supports key establishment and transport ECDH 256 or 384"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "module": "MODULE I",
+    "topic": "Key Biometric Processes",
+    "matches": [
+      {
+        "chunk_id": 517,
+        "page": 512,
+        "score": 0.5401,
+        "text": "Card Authentication Key: The PIV card is authenticated using the Card Authentication Key in a challenge response protocol. This mechanism allows contact (via card reader) or contactless (via radio waves) authentication of the PIV card without the holder s active participation, and provides a low level of assurance. BIO: The cardholder is authenticated by matching his or her fingerprint sample(s) to the signed biometric data element in an environment without a human attendant in view. The PIN is required to activate the card. This mechanism achieves a high level of assurance and requires the cardholder s active participation is submitting the PIN as well as the biometric sample. BIO-A: The cardholder is authenticated by matching his or her fingerprint sample(s) to the signed biometric data element in an environment with a human attendant in view. The PIN is required to activate the card. This mechanism achieves a very high level of assurance when coupled with full trust validation of the biometric template retrieved from the card, and requires the cardholder s active participation is submitting the PIN as well as the biometric sample. PKI: The cardholder is authenticated by demonstrating control of the PIV authentication private key in a challenge response protocol that can be validated using the PIV authentication certificate. The PIN is required to activate the card. This mechanism achieves a very high level of identity assurance and requires the cardholder s knowledge of the PIN. In each of the above use cases, except the symmetric Card Authentication Key use case, the source and the integrity of the corresponding PIV credential are validated by verifying the digital signature on the credential, with the signature being provided by a trusted entity. A variety of protocols can be constructed for each of these authentication types. SP-800-78-3 gives examples for each type."
+      },
+      {
+        "chunk_id": 516,
+        "page": 511,
+        "score": 0.5286,
+        "text": "488 / User Authentication Electronic facial image: For biometric authentication. Asymmetric Card Authentication Key: Asymmetric key pair and corresponding certificate used for card authentication. Optional elements include the following: Digital Signature Key: Asymmetric key pair and corresponding certificate that supports document signing and signing of data elements such as the CHUID. Key Management Key: Asymmetric key pair and corresponding certificate supporting key establishment and transport. Symmetric Card Authentication Key: For supporting physical access applications. PIV Card Application Administration Key: Symmetric key associated with the card management system. One or two iris images: For biometric authentication. Table 15.5 lists the algorithm and key size requirements for PIV key types. Authentication Using the electronic credentials resident on a PIV card, the card supports the following authentication mechanisms: CHUID: The cardholder is authenticated using the signed CHUID data element on the card. This mechanism is useful in environments where a low level of assurance is acceptable and rapid contactless authentication is necessary. Table 15.5 PIV Algorithms and Key Sizes PIV Key Type Algorithms Key Sizes (bits) Application PIV Authentication Key RSA 2048 Supports card and cardholder authentication for an interoperable environment ECDSA 256 Card Authentication Key 3. TDEA 168 Supports card authentication for physical access AES 128, 192, or 256 RSA 2048 Supports card authentication for an interoperable environment ECDSA 256 Digital Signature Key RSA 2048 or 3072 Supports document signing and nonce signing ECDSA 256 or 384 Key Management Key RSA 2048 Supports key establishment and transport ECDH 256 or 384"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "module": "MODULE I",
+    "topic": "Performance Measures In Biometric Systems",
+    "matches": []
+  },
+  {
+    "id": 6,
+    "module": "MODULE I",
+    "topic": "Assessing The Privacy Risks Of Biometrics",
+    "matches": []
+  },
+  {
+    "id": 7,
+    "module": "MODULE I",
+    "topic": "Different Biometric Standards",
+    "matches": [
+      {
+        "chunk_id": 516,
+        "page": 511,
+        "score": 0.5165,
+        "text": "488 / User Authentication Electronic facial image: For biometric authentication. Asymmetric Card Authentication Key: Asymmetric key pair and corresponding certificate used for card authentication. Optional elements include the following: Digital Signature Key: Asymmetric key pair and corresponding certificate that supports document signing and signing of data elements such as the CHUID. Key Management Key: Asymmetric key pair and corresponding certificate supporting key establishment and transport. Symmetric Card Authentication Key: For supporting physical access applications. PIV Card Application Administration Key: Symmetric key associated with the card management system. One or two iris images: For biometric authentication. Table 15.5 lists the algorithm and key size requirements for PIV key types. Authentication Using the electronic credentials resident on a PIV card, the card supports the following authentication mechanisms: CHUID: The cardholder is authenticated using the signed CHUID data element on the card. This mechanism is useful in environments where a low level of assurance is acceptable and rapid contactless authentication is necessary. Table 15.5 PIV Algorithms and Key Sizes PIV Key Type Algorithms Key Sizes (bits) Application PIV Authentication Key RSA 2048 Supports card and cardholder authentication for an interoperable environment ECDSA 256 Card Authentication Key 3. TDEA 168 Supports card authentication for physical access AES 128, 192, or 256 RSA 2048 Supports card authentication for an interoperable environment ECDSA 256 Digital Signature Key RSA 2048 or 3072 Supports document signing and nonce signing ECDSA 256 or 384 Key Management Key RSA 2048 Supports key establishment and transport ECDH 256 or 384"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "module": "MODULE I",
+    "topic": "Designing And Selecting A Biometric System",
+    "matches": []
+  },
+  {
+    "id": 9,
+    "module": "MODULE I",
+    "topic": "Application in Designing And Selecting A Biometric System",
+    "matches": []
+  },
+  {
+    "id": 10,
+    "module": "MODULE I",
+    "topic": "Key Biometric Terms And Processes",
+    "matches": [
+      {
+        "chunk_id": 516,
+        "page": 511,
+        "score": 0.5475,
+        "text": "488 / User Authentication Electronic facial image: For biometric authentication. Asymmetric Card Authentication Key: Asymmetric key pair and corresponding certificate used for card authentication. Optional elements include the following: Digital Signature Key: Asymmetric key pair and corresponding certificate that supports document signing and signing of data elements such as the CHUID. Key Management Key: Asymmetric key pair and corresponding certificate supporting key establishment and transport. Symmetric Card Authentication Key: For supporting physical access applications. PIV Card Application Administration Key: Symmetric key associated with the card management system. One or two iris images: For biometric authentication. Table 15.5 lists the algorithm and key size requirements for PIV key types. Authentication Using the electronic credentials resident on a PIV card, the card supports the following authentication mechanisms: CHUID: The cardholder is authenticated using the signed CHUID data element on the card. This mechanism is useful in environments where a low level of assurance is acceptable and rapid contactless authentication is necessary. Table 15.5 PIV Algorithms and Key Sizes PIV Key Type Algorithms Key Sizes (bits) Application PIV Authentication Key RSA 2048 Supports card and cardholder authentication for an interoperable environment ECDSA 256 Card Authentication Key 3. TDEA 168 Supports card authentication for physical access AES 128, 192, or 256 RSA 2048 Supports card authentication for an interoperable environment ECDSA 256 Digital Signature Key RSA 2048 or 3072 Supports document signing and nonce signing ECDSA 256 or 384 Key Management Key RSA 2048 Supports key establishment and transport ECDH 256 or 384"
+      },
+      {
+        "chunk_id": 517,
+        "page": 512,
+        "score": 0.5367,
+        "text": "Card Authentication Key: The PIV card is authenticated using the Card Authentication Key in a challenge response protocol. This mechanism allows contact (via card reader) or contactless (via radio waves) authentication of the PIV card without the holder s active participation, and provides a low level of assurance. BIO: The cardholder is authenticated by matching his or her fingerprint sample(s) to the signed biometric data element in an environment without a human attendant in view. The PIN is required to activate the card. This mechanism achieves a high level of assurance and requires the cardholder s active participation is submitting the PIN as well as the biometric sample. BIO-A: The cardholder is authenticated by matching his or her fingerprint sample(s) to the signed biometric data element in an environment with a human attendant in view. The PIN is required to activate the card. This mechanism achieves a very high level of assurance when coupled with full trust validation of the biometric template retrieved from the card, and requires the cardholder s active participation is submitting the PIN as well as the biometric sample. PKI: The cardholder is authenticated by demonstrating control of the PIV authentication private key in a challenge response protocol that can be validated using the PIV authentication certificate. The PIN is required to activate the card. This mechanism achieves a very high level of identity assurance and requires the cardholder s knowledge of the PIN. In each of the above use cases, except the symmetric Card Authentication Key use case, the source and the integrity of the corresponding PIV credential are validated by verifying the digital signature on the credential, with the signature being provided by a trusted entity. A variety of protocols can be constructed for each of these authentication types. SP-800-78-3 gives examples for each type."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "module": "MODULE I",
+    "topic": "Biometric Matching Methods",
+    "matches": []
+  },
+  {
+    "id": 12,
+    "module": "MODULE I",
+    "topic": "Accuracy In Biometric System",
+    "matches": []
+  },
+  {
+    "id": 13,
+    "module": "MODULE II",
+    "topic": "Physical Biometrics: Fingerprints",
+    "matches": [
+      {
+        "chunk_id": 517,
+        "page": 512,
+        "score": 0.5014,
+        "text": "Card Authentication Key: The PIV card is authenticated using the Card Authentication Key in a challenge response protocol. This mechanism allows contact (via card reader) or contactless (via radio waves) authentication of the PIV card without the holder s active participation, and provides a low level of assurance. BIO: The cardholder is authenticated by matching his or her fingerprint sample(s) to the signed biometric data element in an environment without a human attendant in view. The PIN is required to activate the card. This mechanism achieves a high level of assurance and requires the cardholder s active participation is submitting the PIN as well as the biometric sample. BIO-A: The cardholder is authenticated by matching his or her fingerprint sample(s) to the signed biometric data element in an environment with a human attendant in view. The PIN is required to activate the card. This mechanism achieves a very high level of assurance when coupled with full trust validation of the biometric template retrieved from the card, and requires the cardholder s active participation is submitting the PIN as well as the biometric sample. PKI: The cardholder is authenticated by demonstrating control of the PIV authentication private key in a challenge response protocol that can be validated using the PIV authentication certificate. The PIN is required to activate the card. This mechanism achieves a very high level of identity assurance and requires the cardholder s knowledge of the PIN. In each of the above use cases, except the symmetric Card Authentication Key use case, the source and the integrity of the corresponding PIV credential are validated by verifying the digital signature on the credential, with the signature being provided by a trusted entity. A variety of protocols can be constructed for each of these authentication types. SP-800-78-3 gives examples for each type."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "module": "MODULE II",
+    "topic": "Technical Description",
+    "matches": []
+  },
+  {
+    "id": 15,
+    "module": "MODULE II",
+    "topic": "Characteristics in Technical Description",
+    "matches": []
+  },
+  {
+    "id": 16,
+    "module": "MODULE II",
+    "topic": "Competing Technology",
+    "matches": []
+  },
+  {
+    "id": 17,
+    "module": "MODULE II",
+    "topic": "Strengths in Competing Technology",
+    "matches": []
+  },
+  {
+    "id": 18,
+    "module": "MODULE II",
+    "topic": "Weaknesses in Competing Technology",
+    "matches": []
+  },
+  {
+    "id": 19,
+    "module": "MODULE II",
+    "topic": "Deployments in Competing Technology",
+    "matches": []
+  },
+  {
+    "id": 20,
+    "module": "MODULE II",
+    "topic": "Facial Scan Technical Description",
+    "matches": []
+  },
+  {
+    "id": 21,
+    "module": "MODULE II",
+    "topic": "Characteristics in Facial Scan Technical Description",
+    "matches": []
+  },
+  {
+    "id": 22,
+    "module": "MODULE II",
+    "topic": "Weaknesses in Facial Scan Technical Description",
+    "matches": []
+  },
+  {
+    "id": 23,
+    "module": "MODULE II",
+    "topic": "Deployments in Facial Scan Technical Description",
+    "matches": []
+  },
+  {
+    "id": 24,
+    "module": "MODULE II",
+    "topic": "Retina Vascular Pattern Technical Description",
+    "matches": []
+  },
+  {
+    "id": 25,
+    "module": "MODULE II",
+    "topic": "Characteristics in Retina Vascular Pattern Technical Description",
+    "matches": []
+  },
+  {
+    "id": 26,
+    "module": "MODULE II",
+    "topic": "Strength in Retina Vascular Pattern Technical Description",
+    "matches": []
+  },
+  {
+    "id": 27,
+    "module": "MODULE II",
+    "topic": "Weaknesses in Retina Vascular Pattern Technical Description",
+    "matches": []
+  },
+  {
+    "id": 28,
+    "module": "MODULE II",
+    "topic": "Deployments in Retina Vascular Pattern Technical Description",
+    "matches": []
+  },
+  {
+    "id": 29,
+    "module": "MODULE II",
+    "topic": "Facial Scan",
+    "matches": []
+  },
+  {
+    "id": 30,
+    "module": "MODULE II",
+    "topic": "Ear Scan",
+    "matches": []
+  },
+  {
+    "id": 31,
+    "module": "MODULE II",
+    "topic": "Retina Scan",
+    "matches": []
+  },
+  {
+    "id": 32,
+    "module": "MODULE II",
+    "topic": "Iris Scan",
+    "matches": []
+  },
+  {
+    "id": 33,
+    "module": "MODULE II",
+    "topic": "Automated Fingerprint Identification System",
+    "matches": []
+  },
+  {
+    "id": 34,
+    "module": "MODULE II",
+    "topic": "Palm Print",
+    "matches": []
+  },
+  {
+    "id": 35,
+    "module": "MODULE II",
+    "topic": "Hand Vascular Geometry Analysis",
+    "matches": []
+  },
+  {
+    "id": 36,
+    "module": "MODULE II",
+    "topic": "Knuckle in Hand Vascular Geometry Analysis",
+    "matches": []
+  },
+  {
+    "id": 37,
+    "module": "MODULE II",
+    "topic": "Dental in Hand Vascular Geometry Analysis",
+    "matches": []
+  },
+  {
+    "id": 38,
+    "module": "MODULE II",
+    "topic": "Cognitive Biometrics",
+    "matches": []
+  },
+  {
+    "id": 39,
+    "module": "MODULE III",
+    "topic": "Behavioural Biometrics: Handprint Biometrics",
+    "matches": []
+  },
+  {
+    "id": 40,
+    "module": "MODULE III",
+    "topic": "Signature And Handwriting Technology",
+    "matches": []
+  },
+  {
+    "id": 41,
+    "module": "MODULE III",
+    "topic": "Technical Description",
+    "matches": []
+  },
+  {
+    "id": 42,
+    "module": "MODULE III",
+    "topic": "Classification in Technical Description",
+    "matches": []
+  },
+  {
+    "id": 43,
+    "module": "MODULE III",
+    "topic": "Comprehensive Packet Logging",
+    "matches": []
+  },
+  {
+    "id": 44,
+    "module": "MODULE III",
+    "topic": "Keyboard Or Keystroke Dynamics",
+    "matches": []
+  },
+  {
+    "id": 45,
+    "module": "MODULE III",
+    "topic": "Voice in Keyboard Or Keystroke Dynamics",
+    "matches": []
+  },
+  {
+    "id": 46,
+    "module": "MODULE III",
+    "topic": "Data Acquisition",
+    "matches": []
+  },
+  {
+    "id": 47,
+    "module": "MODULE III",
+    "topic": "Feature Extraction",
+    "matches": []
+  },
+  {
+    "id": 48,
+    "module": "MODULE III",
+    "topic": "Characteristics in Feature Extraction",
+    "matches": []
+  },
+  {
+    "id": 49,
+    "module": "MODULE III",
+    "topic": "Strength in Feature Extraction",
+    "matches": []
+  },
+  {
+    "id": 50,
+    "module": "MODULE III",
+    "topic": "Weakness in Feature Extraction",
+    "matches": []
+  },
+  {
+    "id": 51,
+    "module": "MODULE III",
+    "topic": "Deployment in Feature Extraction",
+    "matches": []
+  },
+  {
+    "id": 52,
+    "module": "MODULE III",
+    "topic": "Gait Recognition",
+    "matches": []
+  },
+  {
+    "id": 53,
+    "module": "MODULE III",
+    "topic": "Gesture Recognition",
+    "matches": []
+  },
+  {
+    "id": 54,
+    "module": "MODULE III",
+    "topic": "Video Face",
+    "matches": []
+  },
+  {
+    "id": 55,
+    "module": "MODULE III",
+    "topic": "Mapping The Body Technology",
+    "matches": []
+  },
+  {
+    "id": 56,
+    "module": "MODULE III",
+    "topic": "Multi Biometrics And Multi Factor Biometrics",
+    "matches": []
+  },
+  {
+    "id": 57,
+    "module": "MODULE III",
+    "topic": "Two Factor Authentication With Password",
+    "matches": [
+      {
+        "chunk_id": 463,
+        "page": 474,
+        "score": 0.5047,
+        "text": "I don t have to show you any stinking badges! The Treasure of the Sierra Madre, 1948 Learning Objectives After studying this chapter, you should be able to: - Understand the distinction between identification and verification. - Present an overview of techniques for remote user authentication using symmetric encryption. - Give a presentation on Kerberos. - Explain the differences between versions 4 and 5 of Kerberos. - Describe the use of Kerberos in multiple realms. - Present an overview of techniques for remote user authentication using asymmetric encryption. - Understand the need for a federated identity management system. - Explain the use of PIV mechanisms as part of a user authentication system. This chapter examines some of the authentication functions that have been developed to support network-based use authentication. The chapter begins with an introduction to some of the concepts and key considerations for user authentication over a network or the Internet. The next section examines user-authentication protocols that rely on symmetric encryption. This is followed by a section on one of the earliest and also one of the most widely used authentication services: Kerberos. Next, the chapter looks at user-authentication protocols that rely on asymmetric encryption. This is followed by a discussion of the X.509 user-authentication protocol. Finally, the concept of federated identity is introduced. 15.1 Remote user-Authentication Principles In most computer security contexts, user authentication is the fundamental building block and the primary line of defense. User authentication is the basis for most types of access control and for user accountability. RFC 4949 (Internet Security Glossary) defines user authentication as shown on the following page. For example, user Alice Toklas could have the user identifier ABTOKLAS. This information needs to be stored on any server or computer system that Alice wishes to use and could be known to system administrators and other users. A typical item of authentication information associated with this user"
+      },
+      {
+        "chunk_id": 485,
+        "page": 486,
+        "score": 0.5006,
+        "text": "wants access to the same service at a later time, the client can simply use the previously acquired service-granting ticket and need not bother the user for a password. Note that the ticket is encrypted with a secret key (Kv) known only to the TGS and the server, preventing alteration. Finally, with a particular service-granting ticket, the client can gain access to the corresponding service with step 5. 5. The client requests access to a service on behalf of the user. For this purpose, the client transmits a message to the server containing the user s ID and the servicegranting ticket. The server authenticates by using the contents of the ticket. This new scenario satisfies the two requirements of only one password query per user session and protection of the user password. The Version 4 Authentication Dialogue Although the foregoing scenario enhances security compared to the first attempt, two additional problems remain. The heart of the first problem is the lifetime associated with the ticket-granting ticket. If this lifetime is very short (e.g., minutes), then the user will be repeatedly asked for a password. If the lifetime is long (e.g., hours), then an opponent has a greater opportunity for replay. An opponent could eavesdrop on the network and capture a copy of the ticket-granting ticket and then wait for the legitimate user to log out. Then the opponent could forge the legitimate user s network address and send the message of step (3) to the TGS. This would give the opponent unlimited access to the resources and files available to the legitimate user."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "module": "MODULE III",
+    "topic": "Tickets And Tokens",
+    "matches": []
+  },
+  {
+    "id": 59,
+    "module": "MODULE IV",
+    "topic": "User Interfaces: Biometric Interfaces: Human Machine Interface",
+    "matches": []
+  },
+  {
+    "id": 60,
+    "module": "MODULE IV",
+    "topic": "Bhmi Structure",
+    "matches": []
+  },
+  {
+    "id": 61,
+    "module": "MODULE IV",
+    "topic": "Human Side Interface: Iris Image Interface",
+    "matches": []
+  },
+  {
+    "id": 62,
+    "module": "MODULE IV",
+    "topic": "Hand Geometry And Fingerprint Sensor",
+    "matches": []
+  },
+  {
+    "id": 63,
+    "module": "MODULE IV",
+    "topic": "Executive Decision",
+    "matches": []
+  },
+  {
+    "id": 64,
+    "module": "MODULE IV",
+    "topic": "Implementation Plan",
+    "matches": []
+  },
+  {
+    "id": 65,
+    "module": "MODULE IV",
+    "topic": "Case Study On Physiological",
+    "matches": []
+  },
+  {
+    "id": 66,
+    "module": "MODULE IV",
+    "topic": "Behavioural And Multi Factor Biometrics In Identification System",
+    "matches": []
+  },
+  {
+    "id": 67,
+    "module": "MODULE IV",
+    "topic": "Categorizing Biometric Applications",
+    "matches": [
+      {
+        "chunk_id": 516,
+        "page": 511,
+        "score": 0.508,
+        "text": "488 / User Authentication Electronic facial image: For biometric authentication. Asymmetric Card Authentication Key: Asymmetric key pair and corresponding certificate used for card authentication. Optional elements include the following: Digital Signature Key: Asymmetric key pair and corresponding certificate that supports document signing and signing of data elements such as the CHUID. Key Management Key: Asymmetric key pair and corresponding certificate supporting key establishment and transport. Symmetric Card Authentication Key: For supporting physical access applications. PIV Card Application Administration Key: Symmetric key associated with the card management system. One or two iris images: For biometric authentication. Table 15.5 lists the algorithm and key size requirements for PIV key types. Authentication Using the electronic credentials resident on a PIV card, the card supports the following authentication mechanisms: CHUID: The cardholder is authenticated using the signed CHUID data element on the card. This mechanism is useful in environments where a low level of assurance is acceptable and rapid contactless authentication is necessary. Table 15.5 PIV Algorithms and Key Sizes PIV Key Type Algorithms Key Sizes (bits) Application PIV Authentication Key RSA 2048 Supports card and cardholder authentication for an interoperable environment ECDSA 256 Card Authentication Key 3. TDEA 168 Supports card authentication for physical access AES 128, 192, or 256 RSA 2048 Supports card authentication for an interoperable environment ECDSA 256 Digital Signature Key RSA 2048 or 3072 Supports document signing and nonce signing ECDSA 256 or 384 Key Management Key RSA 2048 Supports key establishment and transport ECDH 256 or 384"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "module": "MODULE IV",
+    "topic": "Application Areas: Criminal And Citizen Identification",
+    "matches": []
+  },
+  {
+    "id": 69,
+    "module": "MODULE IV",
+    "topic": "Surveillance in Application Areas: Criminal And Citizen Identification",
+    "matches": []
+  },
+  {
+    "id": 70,
+    "module": "MODULE IV",
+    "topic": "Pc/Network Access",
+    "matches": []
+  },
+  {
+    "id": 71,
+    "module": "MODULE IV",
+    "topic": "E-Commerce And Retail/Atm",
+    "matches": []
+  },
+  {
+    "id": 72,
+    "module": "MODULE IV",
+    "topic": "Costs To Deploy",
+    "matches": []
+  },
+  {
+    "id": 73,
+    "module": "MODULE IV",
+    "topic": "Issues In Deployment",
+    "matches": []
+  },
+  {
+    "id": 74,
+    "module": "MODULE IV",
+    "topic": "Biometrics In Medicine",
+    "matches": []
+  },
+  {
+    "id": 75,
+    "module": "MODULE IV",
+    "topic": "Cancellable Biometrics",
+    "matches": []
+  }
+]
