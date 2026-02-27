@@ -1,0 +1,52 @@
+{
+  "course_title": "CRYPTOGRAPHY AND NETWORK SECURITY",
+  "course_code": "19-202-0703",
+  "modules": {
+    "MODULE I": {
+      "raw_text": "Introduction- Security problem in computing, Security in networks. Elementary cryptography-\nIntroduction-Substitution,Transposition,Hill Ciphers and Affine Ciphers.Review of number Theory-\nModular arithmetic.",
+      "topics": [
+        "Introduction- Security Problem In Computing",
+        "Security In Networks. Elementary Cryptography",
+        "Introduction-Substitution",
+        "Transposition",
+        "Hill Ciphers And Affine Ciphers.Review Of Number Theory",
+        "Modular Arithmetic"
+      ],
+      "embedding_ready_text": "Introduction- Security Problem In Computing Security In Networks. Elementary Cryptography Introduction-Substitution Transposition Hill Ciphers And Affine Ciphers.Review Of Number Theory Modular Arithmetic"
+    },
+    "MODULE II": {
+      "raw_text": "Encryption Algorithms- Symmetric key encryption - DES- The Feistel cipher structure. The avalanche\neffect. Modes of operations of DES algorithm. AES-S-boxes.",
+      "topics": [
+        "Encryption Algorithms- Symmetric Key Encryption",
+        "Des- The Feistel Cipher Structure. The Avalanche",
+        "Effect. Modes Of Operations Of Des Algorithm. Aes-S-Boxes"
+      ],
+      "embedding_ready_text": "Encryption Algorithms- Symmetric Key Encryption Des- The Feistel Cipher Structure. The Avalanche Effect. Modes Of Operations Of Des Algorithm. Aes-S-Boxes"
+    },
+    "MODULE III": {
+      "raw_text": "Public Key Encryption- RSA Cryptosystem. Primality testing-Miller-Rabin Algorithm.Key\nManagement-Diffie- Hellman- Cryptosystem-ElGamal Scheme Elliptical Curve Cryptography and\nElliptic curves over Finite Fields. Hash Algorithms- SHA 1 and SHA-512 MAC-HMAC.",
+      "topics": [
+        "Public Key Encryption- Rsa Cryptosystem. Primality Testing-Miller-Rabin Algorithm.Key",
+        "Management-Diffie- Hellman- Cryptosystem-Elgamal Scheme Elliptical Curve Cryptography And",
+        "Elliptic Curves Over Finite Fields. Hash Algorithms- Sha 1 And Sha-512 Mac-Hmac"
+      ],
+      "embedding_ready_text": "Public Key Encryption- Rsa Cryptosystem. Primality Testing-Miller-Rabin Algorithm.Key Management-Diffie- Hellman- Cryptosystem-Elgamal Scheme Elliptical Curve Cryptography And Elliptic Curves Over Finite Fields. Hash Algorithms- Sha 1 And Sha-512 Mac-Hmac"
+    },
+    "MODULE IV": {
+      "raw_text": "Authentication protocols, Authentication applications-Kerberos,X.509,Digital Signature, Secure e-\nmail, SSL,IP Security - Intruders -Malicious Software,Firewalls.",
+      "topics": [
+        "Authentication Protocols",
+        "Authentication Applications-Kerberos",
+        "X.509",
+        "Digital Signature",
+        "Secure E",
+        "Mail",
+        "Ssl",
+        "Ip Security",
+        "Intruders -Malicious Software",
+        "Firewalls"
+      ],
+      "embedding_ready_text": "Authentication Protocols Authentication Applications-Kerberos X.509 Digital Signature Secure E Mail Ssl Ip Security Intruders -Malicious Software Firewalls"
+    }
+  }
+}
